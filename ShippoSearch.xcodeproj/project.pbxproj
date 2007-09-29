@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E2195F30CAD74950059FEF2 /* TIPInputDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2195EE0CAD74940059FEF2 /* TIPInputDevice.m */; };
+		3E2195F40CAD74950059FEF2 /* TIPInputElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2195F00CAD74940059FEF2 /* TIPInputElement.m */; };
+		3E2195F50CAD74950059FEF2 /* TIPInputManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2195F20CAD74950059FEF2 /* TIPInputManager.m */; };
+		3E2195FD0CAD793E0059FEF2 /* GetInput.nib in Resources */ = {isa = PBXBuildFile; fileRef = 3E2195FB0CAD793E0059FEF2 /* GetInput.nib */; };
+		3E2196000CAD7A020059FEF2 /* TriviaPlayerGetInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2195FF0CAD7A020059FEF2 /* TriviaPlayerGetInputController.m */; };
+		3E2196410CAD7C4D0059FEF2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2196400CAD7C4D0059FEF2 /* IOKit.framework */; };
+		3E21964B0CAD7D6D0059FEF2 /* TriviaPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E21964A0CAD7D6D0059FEF2 /* TriviaPlayer.m */; };
+		3E2196540CAD808E0059FEF2 /* jewel green.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3E2196520CAD808E0059FEF2 /* jewel green.pdf */; };
+		3E2196550CAD808E0059FEF2 /* jewel red.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3E2196530CAD808E0059FEF2 /* jewel red.pdf */; };
+		3E2196630CAD924A0059FEF2 /* ImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2196620CAD924A0059FEF2 /* ImageController.m */; };
+		3E24CC910CAC2F6100087922 /* ShippoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E24CC900CAC2F6100087922 /* ShippoView.m */; };
+		3E24CC960CAC2FE600087922 /* CIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E24CC950CAC2FE600087922 /* CIView.m */; };
+		3E24CCA90CAC33D300087922 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E24CCA70CAC33D300087922 /* OpenGL.framework */; };
+		3E24CCAA0CAC33D300087922 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E24CCA80CAC33D300087922 /* QuartzCore.framework */; };
+		3E584C200C7150990093CD10 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3E584C1E0C7150990093CD10 /* Credits.rtf */; };
+		3E6200020CADCC7D001A1C73 /* FullscreenSheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6200010CADCC7D001A1C73 /* FullscreenSheetController.m */; };
+		3E6200050CADCC9B001A1C73 /* TIPScreenSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6200040CADCC9B001A1C73 /* TIPScreenSelectionView.m */; };
+		3E6200350CADF5F7001A1C73 /* TIPGradient.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E6200330CADF5F7001A1C73 /* TIPGradient.c */; };
+		3E62007C0CADF803001A1C73 /* FullscreenSheet.nib in Resources */ = {isa = PBXBuildFile; fileRef = 3E62007A0CADF803001A1C73 /* FullscreenSheet.nib */; };
+		3E62FF1B0CADB24B001A1C73 /* PlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E62FF1A0CADB24B001A1C73 /* PlayerController.m */; };
+		3E62FFC00CADCB92001A1C73 /* TIPFreeWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E62FFBF0CADCB92001A1C73 /* TIPFreeWindow.m */; };
+		45FC53AE08FBFB490091ABDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 45FC53A608FBFB490091ABDF /* InfoPlist.strings */; };
+		45FC53AF08FBFB490091ABDF /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 45FC53A808FBFB490091ABDF /* MainMenu.nib */; };
+		45FC53B108FBFB490091ABDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FC53AC08FBFB490091ABDF /* main.m */; };
+		45FC53B508FBFB5B0091ABDF /* ShippoSearchDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FC53B408FBFB5B0091ABDF /* ShippoSearchDelegate.m */; };
+		65464FC10A9A486600F418E3 /* AppleScriptInfo.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 65464FC00A9A486600F418E3 /* AppleScriptInfo.sdef */; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		3E2195ED0CAD74940059FEF2 /* TIPInputDevice.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TIPInputDevice.h; sourceTree = "<group>"; };
+		3E2195EE0CAD74940059FEF2 /* TIPInputDevice.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TIPInputDevice.m; sourceTree = "<group>"; };
+		3E2195EF0CAD74940059FEF2 /* TIPInputElement.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TIPInputElement.h; sourceTree = "<group>"; };
+		3E2195F00CAD74940059FEF2 /* TIPInputElement.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TIPInputElement.m; sourceTree = "<group>"; };
+		3E2195F10CAD74950059FEF2 /* TIPInputManager.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TIPInputManager.h; sourceTree = "<group>"; };
+		3E2195F20CAD74950059FEF2 /* TIPInputManager.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TIPInputManager.m; sourceTree = "<group>"; };
+		3E2195FC0CAD793E0059FEF2 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/GetInput.nib; sourceTree = "<group>"; };
+		3E2195FE0CAD7A020059FEF2 /* TriviaPlayerGetInputController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TriviaPlayerGetInputController.h; sourceTree = "<group>"; };
+		3E2195FF0CAD7A020059FEF2 /* TriviaPlayerGetInputController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TriviaPlayerGetInputController.m; sourceTree = "<group>"; };
+		3E2196400CAD7C4D0059FEF2 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		3E2196490CAD7D6D0059FEF2 /* TriviaPlayer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TriviaPlayer.h; sourceTree = "<group>"; };
+		3E21964A0CAD7D6D0059FEF2 /* TriviaPlayer.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TriviaPlayer.m; sourceTree = "<group>"; };
+		3E2196520CAD808E0059FEF2 /* jewel green.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "jewel green.pdf"; sourceTree = "<group>"; };
+		3E2196530CAD808E0059FEF2 /* jewel red.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "jewel red.pdf"; sourceTree = "<group>"; };
+		3E2196610CAD924A0059FEF2 /* ImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageController.h; sourceTree = "<group>"; };
+		3E2196620CAD924A0059FEF2 /* ImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageController.m; sourceTree = "<group>"; };
+		3E24CC8F0CAC2F6100087922 /* ShippoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShippoView.h; sourceTree = "<group>"; };
+		3E24CC900CAC2F6100087922 /* ShippoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShippoView.m; sourceTree = "<group>"; };
+		3E24CC940CAC2FE600087922 /* CIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIView.h; sourceTree = "<group>"; };
+		3E24CC950CAC2FE600087922 /* CIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIView.m; sourceTree = "<group>"; };
+		3E24CCA70CAC33D300087922 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		3E24CCA80CAC33D300087922 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /System/Library/Frameworks/QuartzCore.framework; sourceTree = "<absolute>"; };
+		3E584C1F0C7150990093CD10 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
+		3E6200000CADCC7D001A1C73 /* FullscreenSheetController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FullscreenSheetController.h; sourceTree = "<group>"; };
+		3E6200010CADCC7D001A1C73 /* FullscreenSheetController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = FullscreenSheetController.m; sourceTree = "<group>"; };
+		3E6200030CADCC9B001A1C73 /* TIPScreenSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TIPScreenSelectionView.h; sourceTree = "<group>"; };
+		3E6200040CADCC9B001A1C73 /* TIPScreenSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TIPScreenSelectionView.m; sourceTree = "<group>"; };
+		3E6200330CADF5F7001A1C73 /* TIPGradient.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = TIPGradient.c; sourceTree = "<group>"; };
+		3E6200340CADF5F7001A1C73 /* TIPGradient.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TIPGradient.h; sourceTree = "<group>"; };
+		3E62007B0CADF803001A1C73 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/FullscreenSheet.nib; sourceTree = "<group>"; };
+		3E62FF190CADB24B001A1C73 /* PlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerController.h; sourceTree = "<group>"; };
+		3E62FF1A0CADB24B001A1C73 /* PlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerController.m; sourceTree = "<group>"; };
+		3E62FFBE0CADCB92001A1C73 /* TIPFreeWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TIPFreeWindow.h; sourceTree = "<group>"; };
+		3E62FFBF0CADCB92001A1C73 /* TIPFreeWindow.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TIPFreeWindow.m; sourceTree = "<group>"; };
+		45FC53A708FBFB490091ABDF /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		45FC53A908FBFB490091ABDF /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		45FC53AA08FBFB490091ABDF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		45FC53AC08FBFB490091ABDF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		45FC53B308FBFB5B0091ABDF /* ShippoSearchDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShippoSearchDelegate.h; sourceTree = "<group>"; };
+		45FC53B408FBFB5B0091ABDF /* ShippoSearchDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShippoSearchDelegate.m; sourceTree = "<group>"; };
+		45FC53EA08FBFD0E0091ABDF /* ShippoSearch_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShippoSearch_Prefix.pch; sourceTree = "<group>"; };
+		65464FC00A9A486600F418E3 /* AppleScriptInfo.sdef */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 4; path = AppleScriptInfo.sdef; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* ShippoSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShippoSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				3E24CCA90CAC33D300087922 /* OpenGL.framework in Frameworks */,
+				3E24CCAA0CAC33D300087922 /* QuartzCore.framework in Frameworks */,
+				3E2196410CAD7C4D0059FEF2 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E2196400CAD7C4D0059FEF2 /* IOKit.framework */,
+				3E24CCA70CAC33D300087922 /* OpenGL.framework */,
+				3E24CCA80CAC33D300087922 /* QuartzCore.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* ShippoSearch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				45FC53AB08FBFB490091ABDF /* Source */,
+				45FC53A508FBFB490091ABDF /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = Sample;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3E2195E90CAD739D0059FEF2 /* Game View */ = {
+			isa = PBXGroup;
+			children = (
+				3E24CC8F0CAC2F6100087922 /* ShippoView.h */,
+				3E24CC900CAC2F6100087922 /* ShippoView.m */,
+				3E24CC940CAC2FE600087922 /* CIView.h */,
+				3E24CC950CAC2FE600087922 /* CIView.m */,
+			);
+			name = "Game View";
+			sourceTree = "<group>";
+		};
+		3E2195EC0CAD74170059FEF2 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				3E2195FE0CAD7A020059FEF2 /* TriviaPlayerGetInputController.h */,
+				3E2195FF0CAD7A020059FEF2 /* TriviaPlayerGetInputController.m */,
+				3E2195ED0CAD74940059FEF2 /* TIPInputDevice.h */,
+				3E2195EE0CAD74940059FEF2 /* TIPInputDevice.m */,
+				3E2195EF0CAD74940059FEF2 /* TIPInputElement.h */,
+				3E2195F00CAD74940059FEF2 /* TIPInputElement.m */,
+				3E2195F10CAD74950059FEF2 /* TIPInputManager.h */,
+				3E2195F20CAD74950059FEF2 /* TIPInputManager.m */,
+			);
+			name = Input;
+			sourceTree = "<group>";
+		};
+		3E6200060CADCCA5001A1C73 /* Fullscreen */ = {
+			isa = PBXGroup;
+			children = (
+				3E6200030CADCC9B001A1C73 /* TIPScreenSelectionView.h */,
+				3E6200040CADCC9B001A1C73 /* TIPScreenSelectionView.m */,
+				3E6200000CADCC7D001A1C73 /* FullscreenSheetController.h */,
+				3E6200010CADCC7D001A1C73 /* FullscreenSheetController.m */,
+				3E62FFBE0CADCB92001A1C73 /* TIPFreeWindow.h */,
+				3E62FFBF0CADCB92001A1C73 /* TIPFreeWindow.m */,
+			);
+			name = Fullscreen;
+			sourceTree = "<group>";
+		};
+		45FC53A508FBFB490091ABDF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3E2196520CAD808E0059FEF2 /* jewel green.pdf */,
+				3E2196530CAD808E0059FEF2 /* jewel red.pdf */,
+				3E584C1E0C7150990093CD10 /* Credits.rtf */,
+				65464FC00A9A486600F418E3 /* AppleScriptInfo.sdef */,
+				45FC53A608FBFB490091ABDF /* InfoPlist.strings */,
+				45FC53A808FBFB490091ABDF /* MainMenu.nib */,
+				3E2195FB0CAD793E0059FEF2 /* GetInput.nib */,
+				3E62007A0CADF803001A1C73 /* FullscreenSheet.nib */,
+				45FC53AA08FBFB490091ABDF /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		45FC53AB08FBFB490091ABDF /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				3E6200330CADF5F7001A1C73 /* TIPGradient.c */,
+				3E6200340CADF5F7001A1C73 /* TIPGradient.h */,
+				3E2196490CAD7D6D0059FEF2 /* TriviaPlayer.h */,
+				3E21964A0CAD7D6D0059FEF2 /* TriviaPlayer.m */,
+				3E6200060CADCCA5001A1C73 /* Fullscreen */,
+				3E2195EC0CAD74170059FEF2 /* Input */,
+				3E2195E90CAD739D0059FEF2 /* Game View */,
+				45FC53EA08FBFD0E0091ABDF /* ShippoSearch_Prefix.pch */,
+				45FC53AC08FBFB490091ABDF /* main.m */,
+				45FC53B308FBFB5B0091ABDF /* ShippoSearchDelegate.h */,
+				45FC53B408FBFB5B0091ABDF /* ShippoSearchDelegate.m */,
+				3E2196610CAD924A0059FEF2 /* ImageController.h */,
+				3E2196620CAD924A0059FEF2 /* ImageController.m */,
+				3E62FF190CADB24B001A1C73 /* PlayerController.h */,
+				3E62FF1A0CADB24B001A1C73 /* PlayerController.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* ShippoSearch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45FC538208FBF91C0091ABDF /* Build configuration list for PBXNativeTarget "ShippoSearch" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				45D4CC230A828F9E00804A18 /* Remove Headers */,
+				3E903CD00BC588C7009B6F93 /* Strip Symbols */,
+				3EFF82790B55914B0049AD7D /* Set Revision Number */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShippoSearch;
+			productInstallPath = "$(HOME)/Applications";
+			productName = ShippoSearch;
+			productReference = 8D1107320486CEB800E47090 /* ShippoSearch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 45FC538608FBF91C0091ABDF /* Build configuration list for PBXProject "ShippoSearch" */;
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Sample */;
+			projectDirPath = "";
+			targets = (
+				8D1107260486CEB800E47090 /* ShippoSearch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45FC53AE08FBFB490091ABDF /* InfoPlist.strings in Resources */,
+				45FC53AF08FBFB490091ABDF /* MainMenu.nib in Resources */,
+				65464FC10A9A486600F418E3 /* AppleScriptInfo.sdef in Resources */,
+				3E584C200C7150990093CD10 /* Credits.rtf in Resources */,
+				3E2195FD0CAD793E0059FEF2 /* GetInput.nib in Resources */,
+				3E2196540CAD808E0059FEF2 /* jewel green.pdf in Resources */,
+				3E2196550CAD808E0059FEF2 /* jewel red.pdf in Resources */,
+				3E62007C0CADF803001A1C73 /* FullscreenSheet.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E903CD00BC588C7009B6F93 /* Strip Symbols */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Strip Symbols";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/usr/bin/perl -w";
+			shellScript = "#\n# Last updated: 21MAR06, Andy O'Meara and Rob Barris\n#\n# This is an Xcode post-build phase script for devs who sleep better at night knowing\n#    that their deployment binaries are as stripped as possible.  This makes life more difficult\n#    for a hacker/cracker to locate sensitive code to trace, study, and/or extract.\n#\n# This script will execute only if the Xcode \"Deployment Postprocessing\" setting\n#    is set (aka DEPLOYMENT_POSTPROCESSING).\n#\n# The downside to shipping a stripped binary is that your user's crash reports\n#    will be useless unless you have a link map to convert code offsets (from a stack trace)\n#    into proc names.  To address this, this script moves your pre-stripped executable\n#    to the build dir, appending \"_full\" to the filename, allowing you to retain it for\n#    the day you need it in order to decipher a stack trace.  You do this by using 'atos'\n#    with the original generated binary (type 'man atos' for info).\n#\n# Recommended Xcode build settings:\n#    Dead Code Stripping                  YES\n#    Only Link In Essential Symbols       NO\n#    Deployment Postprocessing            YES (this activates this script)\n#    Strip Linked Product                 NO\n#    Use Separate Strip                   NO\n#    Strip Style                          All Symbols\n#    Strip Debug Symbols During Copy      NO\n#    Preserve Private External Symbols    NO\n#    Separate PCH Symbols                 YES\n#    Symbols Hidden By Default            YES (Critical!)\n#    Inline Functions Hidden              YES\n#\n# Note that if you're building a dynamic library, you'll need to explicitly\n#    declare any symbols that you want to be exported.  See the following:\n#    file:///Developer/ADC%20Reference%20Library/documentation/DeveloperTools/Conceptual/CppRuntimeEnv/Articles/SymbolVisibility.html\n#\n\nuse strict;\n\ndie \"$0: Must be run from Xcode\" unless $ENV{\"BUILT_PRODUCTS_DIR\"};\n\n# This script is activated via an Xcode env flag.\nif ( $ENV{DEPLOYMENT_POSTPROCESSING} ne \"YES\" ) {\n   exit 0;\n}\n\nprint \"\\n\\n==================== Commencing external stripping phase...\\n\";\n        \nmy $BINARY       = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{WRAPPER_NAME}/Contents/MacOS/$ENV{EXECUTABLE_NAME}\";\nmy $BINARY_FULL  = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{EXECUTABLE_NAME}_full\";\nmy $BINARY_i386  = \"${BINARY}_i386\";\nmy $BINARY_ppc   = \"${BINARY}_ppc\";\n\n       \n# Extract each arch into a \"thin\" binary for stripping\n`lipo \"$BINARY\" -thin  ppc -output \"$BINARY_ppc\" `;\n`lipo \"$BINARY\" -thin i386 -output \"$BINARY_i386\"`;\n\n# Retain the orignal binary for QA and use with the util 'atos'\n`mv -f \"$BINARY\" \"$BINARY_FULL\"`;\n\n# Perform desired stripping on each thin binary.  \n`strip -S -x -o \"${BINARY_ppc}_tmp\"  -r \"$BINARY_ppc\" `;\n`strip -S -x -o \"${BINARY_i386}_tmp\" -r \"$BINARY_i386\"`;\n\n# We're now done with the original thin binaries, so chuck them.\n`rm -f \"$BINARY_ppc\" `;\n`rm -f \"$BINARY_i386\"`;\n\n# Make the new universal binary from our stripped thin pieces.\n`lipo -arch i386 \"${BINARY_i386}_tmp\" -arch ppc \"${BINARY_ppc}_tmp\" -create -output \"$BINARY\"`;\n\n# We're now done with the temp thin binaries, so chuck them.\n`rm -f \"${BINARY_ppc}_tmp\" `;\n`rm -f \"${BINARY_i386}_tmp\"`;\n\n\nprint \"\\n==================== External strip phase complete\\n\";\n\n\n#EOF";
+		};
+		3EFF82790B55914B0049AD7D /* Set Revision Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Set Revision Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/usr/bin/perl -w";
+			shellScript = "# Xcode auto-versioning script for Subversion\n# by Axel Andersson, modified by Daniel Jalkut to add\n# \"--revision HEAD\" to the svn info line, which allows\n# the latest revision to always be used.\n\nuse strict;\n\ndie \"$0: Must be run from Xcode\" unless $ENV{\"BUILT_PRODUCTS_DIR\"};\n\n# Get the current subversion revision number and use it to set the CFBundleVersion value\nmy $REV = `/usr/local/bin/svnversion -n ./`;\nmy $INFO = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{WRAPPER_NAME}/Contents/Info.plist\";\n\nmy $version = $REV;\n\n# (Match the last group of digits and optional letter M/S):\n\n# ugly yet functional (barely) regex by Daniel Jalkut:\n#$version =~ s/([\\d]*:)(\\d+[M|S]*).*/$2/;\n\n# better yet still functional regex via Kevin \"Regex Nerd\" Ballard\n($version =~ m/\\d+[MS]*$/) && ($version = $&);\n\nmy $gitlog = `~/bin/git log --pretty=format:%h`;\nif( $gitlog ) {\n\t$version = `echo \\\"$gitlog\\\" | wc -l`;\n\tchomp $version;\n\t$version =~ s/^\\s+//;\n\t$version -= 1;\n\t$version .= 'M' unless(`~/bin/git status | tail -n 1` =~ /^nothing to commit/);\n}\n\n#die \"$0: No Subversion revision found\" unless $version;\n$version = 'exported' unless $version;\n\nopen(FH, \"$INFO\") or die \"$0: $INFO: $!\";\nmy $info = join(\"\", <FH>);\nclose(FH);\n\n$info =~ s/([\\t ]+<key>CFBundleVersion<\\/key>\\n[\\t ]+<string>).*?(<\\/string>)/$1$version$2/;\n\nopen(FH, \">$INFO\") or die \"$0: $INFO: $!\";\nprint FH $info;\nclose(FH);";
+		};
+		45D4CC230A828F9E00804A18 /* Remove Headers */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Remove Headers";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n### We only run on \"Release\" builds...\nif [[ $BUILD_STYLE != 'Release' ]] ; then\n\texit 0\nfi\n\nfind \"$TARGET_BUILD_DIR/$FULL_PRODUCT_NAME\" -path '*/Headers/*' -delete\n\nfind \"$TARGET_BUILD_DIR/$FULL_PRODUCT_NAME\" -name 'Headers' -type d -delete\n\nfind \"$TARGET_BUILD_DIR/$FULL_PRODUCT_NAME\" -name 'Headers' -type l -delete";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45FC53B108FBFB490091ABDF /* main.m in Sources */,
+				45FC53B508FBFB5B0091ABDF /* ShippoSearchDelegate.m in Sources */,
+				3E24CC910CAC2F6100087922 /* ShippoView.m in Sources */,
+				3E24CC960CAC2FE600087922 /* CIView.m in Sources */,
+				3E2195F30CAD74950059FEF2 /* TIPInputDevice.m in Sources */,
+				3E2195F40CAD74950059FEF2 /* TIPInputElement.m in Sources */,
+				3E2195F50CAD74950059FEF2 /* TIPInputManager.m in Sources */,
+				3E2196000CAD7A020059FEF2 /* TriviaPlayerGetInputController.m in Sources */,
+				3E21964B0CAD7D6D0059FEF2 /* TriviaPlayer.m in Sources */,
+				3E2196630CAD924A0059FEF2 /* ImageController.m in Sources */,
+				3E62FF1B0CADB24B001A1C73 /* PlayerController.m in Sources */,
+				3E62FFC00CADCB92001A1C73 /* TIPFreeWindow.m in Sources */,
+				3E6200020CADCC7D001A1C73 /* FullscreenSheetController.m in Sources */,
+				3E6200050CADCC9B001A1C73 /* TIPScreenSelectionView.m in Sources */,
+				3E6200350CADF5F7001A1C73 /* TIPGradient.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3E2195FB0CAD793E0059FEF2 /* GetInput.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E2195FC0CAD793E0059FEF2 /* English */,
+			);
+			name = GetInput.nib;
+			sourceTree = "<group>";
+		};
+		3E584C1E0C7150990093CD10 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E584C1F0C7150990093CD10 /* English */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		3E62007A0CADF803001A1C73 /* FullscreenSheet.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E62007B0CADF803001A1C73 /* English */,
+			);
+			name = FullscreenSheet.nib;
+			sourceTree = "<group>";
+		};
+		45FC53A608FBFB490091ABDF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45FC53A708FBFB490091ABDF /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		45FC53A808FBFB490091ABDF /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45FC53A908FBFB490091ABDF /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		45FC538308FBF91C0091ABDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = NO;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_FAST_OBJC_DISPATCH = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Source/ShippoSearch_Prefix.pch;
+				GCC_USE_GCC3_PFE_SUPPORT = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Resources/Info.plist;
+				PREBINDING = NO;
+				PRODUCT_NAME = ShippoSearch;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		45FC538408FBF91C0091ABDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_FAST_OBJC_DISPATCH = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Source/ShippoSearch_Prefix.pch;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_USE_GCC3_PFE_SUPPORT = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_EFFECTIVE_CPLUSPLUS_VIOLATIONS = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Resources/Info.plist;
+				PREBINDING = NO;
+				PRODUCT_NAME = ShippoSearch;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		45FC538708FBF91C0091ABDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_VERSION = 1.0a1;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		45FC538808FBF91C0091ABDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_VERSION = 1.0a1;
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		45FC538208FBF91C0091ABDF /* Build configuration list for PBXNativeTarget "ShippoSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45FC538308FBF91C0091ABDF /* Debug */,
+				45FC538408FBF91C0091ABDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		45FC538608FBF91C0091ABDF /* Build configuration list for PBXProject "ShippoSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45FC538708FBF91C0091ABDF /* Debug */,
+				45FC538808FBF91C0091ABDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

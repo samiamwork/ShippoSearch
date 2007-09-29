@@ -1,0 +1,37 @@
+{
+    IBClasses = (
+        {CLASS = CIView; LANGUAGE = ObjC; SUPERCLASS = NSOpenGLView; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {setDirectory = id; }; 
+            CLASS = ImageController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_table" = NSTableView; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {
+            ACTIONS = {addPlayer = id; removePlayer = id; setButton = id; }; 
+            CLASS = PlayerController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_table" = NSTableView; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {fullscreen = id; nextImage = id; rightAnswer = id; wrongAnswer = id; }; 
+            CLASS = ShippoSearchDelegate; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_buzzedPlayerName" = NSTextField; 
+                "_gameWindow" = NSWindow; 
+                "_imageController" = ImageController; 
+                "_imageView" = ShippoView; 
+                "_playerController" = PlayerController; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = ShippoView; LANGUAGE = ObjC; SUPERCLASS = CIView; }, 
+        {CLASS = TIPFreeWindow; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }
+    ); 
+    IBVersion = 1; 
+}

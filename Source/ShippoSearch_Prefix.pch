@@ -1,0 +1,13 @@
+//
+//  ShippoSearch_Prefix.pch
+//  ShippoSearch
+//
+//  Created by Nur Monson on 9/27/07.
+//  Copyright theidiotproject 2007. All rights reserved.
+//
+
+// Prefix header for all source files of the 'ShippoSearch' target in the 'ShippoSearch' project
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

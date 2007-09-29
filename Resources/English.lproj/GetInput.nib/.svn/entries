@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="46"
+   name=""
+   committed-date="2007-03-27T19:39:35.201949Z"
+   url="file:///Volumes/SVN/Questionable/trunk/Resources/English.lproj/GetInput.nib"
+   last-author="samiam"
+   kind="dir"
+   uuid="ea65e4ba-f029-0410-97c1-87d23b81a39b"
+   revision="97"/>
+<entry
+   committed-rev="44"
+   name="info.nib"
+   text-time="2007-03-27T19:38:43.000000Z"
+   committed-date="2007-03-27T01:37:17.442883Z"
+   checksum="ffc988d90f192daaf2b423cd3326e927"
+   last-author="samiam"
+   kind="file"/>
+<entry
+   committed-rev="46"
+   name="keyedobjects.nib"
+   text-time="2007-03-27T19:38:43.000000Z"
+   committed-date="2007-03-27T19:39:35.201949Z"
+   checksum="a7413e1dcf236428be573ce79f3bc8c2"
+   last-author="samiam"
+   kind="file"
+   prop-time="2007-03-27T01:35:40.000000Z"/>
+<entry
+   committed-rev="44"
+   name="classes.nib"
+   text-time="2007-03-27T19:38:43.000000Z"
+   committed-date="2007-03-27T01:37:17.442883Z"
+   checksum="11e94ae9fdd751e84b03ce6f53f65a5a"
+   last-author="samiam"
+   kind="file"/>
+</wc-entries>

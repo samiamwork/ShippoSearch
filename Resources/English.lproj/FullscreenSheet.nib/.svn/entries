@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="60"
+   name=""
+   committed-date="2007-03-29T20:47:37.108378Z"
+   url="file:///Volumes/SVN/Questionable/trunk/Resources/English.lproj/FullscreenSheet.nib"
+   last-author="samiam"
+   kind="dir"
+   uuid="ea65e4ba-f029-0410-97c1-87d23b81a39b"
+   revision="97"/>
+<entry
+   committed-rev="177"
+   name="info.nib"
+   text-time="2007-07-13T20:44:31.000000Z"
+   committed-date="2007-07-13T20:46:06.933266Z"
+   checksum="ce2de891f9980df1d555e6429e3c781a"
+   last-author="samiam"
+   kind="file"
+   prop-time="2007-02-20T23:23:48.000000Z"
+   revision="177"/>
+<entry
+   committed-rev="177"
+   name="keyedobjects.nib"
+   text-time="2007-07-13T20:44:31.000000Z"
+   committed-date="2007-07-13T20:46:06.933266Z"
+   checksum="595a099e989de82c907142ac0a34977e"
+   last-author="samiam"
+   kind="file"
+   prop-time="2007-02-20T23:23:48.000000Z"
+   revision="177"/>
+<entry
+   committed-rev="1"
+   name="classes.nib"
+   text-time="2007-07-13T20:44:31.000000Z"
+   committed-date="2007-02-20T23:23:31.580733Z"
+   checksum="2ef8aa1e34a6383b5c4cf0bf502caed7"
+   last-author="samiam"
+   kind="file"
+   prop-time="2007-02-20T23:23:48.000000Z"/>
+</wc-entries>
