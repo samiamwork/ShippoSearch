@@ -38,7 +38,7 @@
 	if( ![_animation isAnimating] )
 		return;
 	
-	[_imageView setPixelSize:[_animation currentValue]*49.0f+1.0f];
+	[_imageView setPixelSize:(1.0f-[_animation currentValue])*49.0f+1.0f];
 }
 
 - (IBAction)nextImage:(id)sender
