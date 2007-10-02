@@ -13,11 +13,9 @@
 
 - (void)awakeFromNib
 {
-	_fullscreenController = [[FullscreenSheetController alloc] init];
-	[_fullscreenController setAttachedWindow:_gameWindow];
-	[_imageView setImage:nil];
-	
+	[_imageView setImage:nil];	
 	[_imageView setPixelSize:1.0f];
+	
 	_timer = [NSTimer scheduledTimerWithTimeInterval:1.0/30.0f target:self selector:@selector(animationTick:) userInfo:nil repeats:YES];
 	_animation = [[NSAnimation alloc] initWithDuration:15.0 animationCurve:NSAnimationLinear];
 	[_animation setAnimationBlockingMode:NSAnimationNonblocking];
@@ -31,7 +29,6 @@
 	[_timer invalidate];
 	[_animation release];
 	[_imagePath release];
-	[_fullscreenController release];
 
 	[super dealloc];
 }
@@ -97,6 +94,6 @@
 
 - (IBAction)fullscreen:(id)sender
 {
-	[_fullscreenController toggleFullscreen];
+	[_gameWindow toggleFullscreen:self];
 }
 @end

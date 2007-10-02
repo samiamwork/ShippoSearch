@@ -10,7 +10,7 @@
 #import "ShippoView.h"
 #import "ImageController.h"
 #import "PlayerController.h"
-#import "FullscreenSheetController.h"
+#import "TIPFreeWindow.h"
 
 @interface ShippoSearchDelegate : NSObject
 {
@@ -18,9 +18,7 @@
 	IBOutlet ImageController *_imageController;
 	IBOutlet PlayerController *_playerController;
 	IBOutlet NSTextField *_buzzedPlayerName;
-	IBOutlet NSWindow *_gameWindow;
-	
-	FullscreenSheetController *_fullscreenController;
+	IBOutlet TIPFreeWindow *_gameWindow;
 	
 	NSTimer *_timer;
 	NSAnimation *_animation;
