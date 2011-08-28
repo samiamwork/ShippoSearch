@@ -25,10 +25,12 @@
 	NSString *_imagePath;
 	NSSound *_buzzerSound;
 	float _startingBlockSize;
+	BOOL  _paused;
 	
 	TriviaPlayer *_buzzedPlayer;
 }
 
+- (IBAction)pause:(id)sender;
 - (IBAction)nextImage:(id)sender;
 - (IBAction)rightAnswer:(id)sender;
 - (IBAction)wrongAnswer:(id)sender;

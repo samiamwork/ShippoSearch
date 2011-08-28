@@ -27,6 +27,7 @@
 	[_playerController setDelegate:self];
 	
 	_buzzedPlayer = nil;
+	_paused = NO;
 	
 	_buzzerSound = [[NSSound soundNamed:@"Submarine"] retain];
 }
@@ -49,8 +50,26 @@
 	[_imageView setPixelSize:(1.0f-sqrtf([_animation currentProgress]))*(_startingBlockSize-1.0f)+1.0f];
 }
 
+- (IBAction)pause:(id)sender
+{
+	if(!_paused && [_animation isAnimating])
+	{
+		_paused = YES;
+		[_animation stopAnimation];
+	}
+	else if(_paused)
+	{
+		_paused = NO;
+		if([_animation currentProgress] < 1.0)
+		{
+			[_animation startAnimation];
+		}
+	}
+}
+
 - (IBAction)nextImage:(id)sender
 {
+	_paused = NO;
 	[_imageController removeImage:_imagePath];
 	_imagePath = [[_imageController getImage] retain];
 	
@@ -71,7 +90,7 @@
 
 - (void)playerBuzzed:(TriviaPlayer *)thePlayer
 {
-	if( _buzzedPlayer )
+	if( _buzzedPlayer || _paused)
 		return;
 	
 	_buzzedPlayer = thePlayer;
