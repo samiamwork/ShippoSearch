@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -254,8 +254,11 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0410;
+			};
 			buildConfigurationList = 45FC538608FBF91C0091ABDF /* Build configuration list for PBXProject "ShippoSearch" */;
-			compatibilityVersion = "Xcode 2.4";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -408,7 +411,6 @@
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = NO;
 				GCC_DYNAMIC_NO_PIC = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
 				GCC_FAST_OBJC_DISPATCH = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -428,9 +430,8 @@
 				GCC_WARN_UNUSED_PARAMETER = NO;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
-				PREBINDING = NO;
 				PRODUCT_NAME = ShippoSearch;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
 			};
@@ -439,13 +440,11 @@
 		45FC538408FBF91C0091ABDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_FAST_OBJC_DISPATCH = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
@@ -470,9 +469,8 @@
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
-				PREBINDING = NO;
 				PRODUCT_NAME = ShippoSearch;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
 			};
@@ -482,7 +480,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_VERSION = 1.0a1;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = macosx10.6;
 			};
 			name = Debug;
 		};
@@ -490,11 +488,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_VERSION = 1.0a1;
-				ARCHS = (
-					ppc,
-					i386,
-				);
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				SDKROOT = macosx10.6;
 			};
 			name = Release;
 		};
