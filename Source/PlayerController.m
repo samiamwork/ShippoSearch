@@ -115,7 +115,7 @@
 
 - (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex
 {
-	TriviaPlayer *thePlayer = [_players objectAtIndex:[_table selectedRow]];
+	TriviaPlayer *thePlayer = [_players objectAtIndex:rowIndex];
 	
 	if( [[aTableColumn identifier] isEqualToString:@"status"] )
 		return [thePlayer isConnected] ? [NSImage imageNamed:@"jewel green"] : [NSImage imageNamed:@"jewel red"];

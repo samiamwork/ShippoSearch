@@ -1,37 +1,126 @@
-{
-    IBClasses = (
-        {CLASS = CIView; LANGUAGE = ObjC; SUPERCLASS = NSOpenGLView; }, 
-        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
-        {
-            ACTIONS = {setDirectory = id; }; 
-            CLASS = ImageController; 
-            LANGUAGE = ObjC; 
-            OUTLETS = {"_table" = NSTableView; }; 
-            SUPERCLASS = NSObject; 
-        }, 
-        {CLASS = NSObject; LANGUAGE = ObjC; }, 
-        {
-            ACTIONS = {addPlayer = id; removePlayer = id; setButton = id; }; 
-            CLASS = PlayerController; 
-            LANGUAGE = ObjC; 
-            OUTLETS = {"_table" = NSTableView; }; 
-            SUPERCLASS = NSObject; 
-        }, 
-        {
-            ACTIONS = {fullscreen = id; nextImage = id; rightAnswer = id; wrongAnswer = id; }; 
-            CLASS = ShippoSearchDelegate; 
-            LANGUAGE = ObjC; 
-            OUTLETS = {
-                "_buzzedPlayerName" = NSTextField; 
-                "_gameWindow" = NSWindow; 
-                "_imageController" = ImageController; 
-                "_imageView" = ShippoView; 
-                "_playerController" = PlayerController; 
-            }; 
-            SUPERCLASS = NSObject; 
-        }, 
-        {CLASS = ShippoView; LANGUAGE = ObjC; SUPERCLASS = CIView; }, 
-        {CLASS = TIPFreeWindow; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }
-    ); 
-    IBVersion = 1; 
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IBClasses</key>
+	<array>
+		<dict>
+			<key>CLASS</key>
+			<string>CIView</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>SUPERCLASS</key>
+			<string>NSOpenGLView</string>
+		</dict>
+		<dict>
+			<key>ACTIONS</key>
+			<dict>
+				<key>addPlayer</key>
+				<string>id</string>
+				<key>removePlayer</key>
+				<string>id</string>
+				<key>setButton</key>
+				<string>id</string>
+			</dict>
+			<key>CLASS</key>
+			<string>PlayerController</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>OUTLETS</key>
+			<dict>
+				<key>_table</key>
+				<string>NSTableView</string>
+			</dict>
+			<key>SUPERCLASS</key>
+			<string>NSObject</string>
+		</dict>
+		<dict>
+			<key>ACTIONS</key>
+			<dict>
+				<key>fullscreen</key>
+				<string>id</string>
+				<key>nextImage</key>
+				<string>id</string>
+				<key>rightAnswer</key>
+				<string>id</string>
+				<key>wrongAnswer</key>
+				<string>id</string>
+			</dict>
+			<key>CLASS</key>
+			<string>ShippoSearchDelegate</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>OUTLETS</key>
+			<dict>
+				<key>_buzzedPlayerName</key>
+				<string>NSTextField</string>
+				<key>_gameWindow</key>
+				<string>TIPFreeWindow</string>
+				<key>_imageController</key>
+				<string>ImageController</string>
+				<key>_imageView</key>
+				<string>ShippoView</string>
+				<key>_playerController</key>
+				<string>PlayerController</string>
+			</dict>
+			<key>SUPERCLASS</key>
+			<string>NSObject</string>
+		</dict>
+		<dict>
+			<key>ACTIONS</key>
+			<dict>
+				<key>toggleFullscreen</key>
+				<string>id</string>
+			</dict>
+			<key>CLASS</key>
+			<string>TIPFreeWindow</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>SUPERCLASS</key>
+			<string>NSWindow</string>
+		</dict>
+		<dict>
+			<key>CLASS</key>
+			<string>FirstResponder</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>SUPERCLASS</key>
+			<string>NSObject</string>
+		</dict>
+		<dict>
+			<key>CLASS</key>
+			<string>NSObject</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+		</dict>
+		<dict>
+			<key>CLASS</key>
+			<string>ShippoView</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>SUPERCLASS</key>
+			<string>CIView</string>
+		</dict>
+		<dict>
+			<key>ACTIONS</key>
+			<dict>
+				<key>setDirectory</key>
+				<string>id</string>
+			</dict>
+			<key>CLASS</key>
+			<string>ImageController</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>OUTLETS</key>
+			<dict>
+				<key>_table</key>
+				<string>NSTableView</string>
+			</dict>
+			<key>SUPERCLASS</key>
+			<string>NSObject</string>
+		</dict>
+	</array>
+	<key>IBVersion</key>
+	<string>1</string>
+</dict>
+</plist>

@@ -23,9 +23,9 @@
 		vendorID = 0;
 		productID = 0;
 		version = 0;
-		manufacturer = @"manufacturer";
-		product = @"product";
-		serial = @"serial";
+		manufacturer = [[NSString alloc]initWithString:@"manufacturer"];
+		product = [[NSString alloc] initWithString:@"product"];
+		serial = [[NSString alloc] initWithString:@"serial"];
 	}
 
 	return self;
@@ -33,6 +33,9 @@
 
 - (void)dealloc
 {
+	[manufacturer release];
+	[product release];
+	[serial release];
 	[elements removeAllObjects];
 	
 	// close device interface

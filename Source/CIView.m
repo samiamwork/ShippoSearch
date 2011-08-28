@@ -64,7 +64,7 @@
 
 - (void)prepareOpenGL
 {
-	long param = 1;
+	GLint param = 1;
 	[[self openGLContext] setValues:&param forParameter:NSOpenGLCPSwapInterval];
 	
 	glDisable( GL_ALPHA_TEST );
@@ -117,7 +117,7 @@
 		if( !pf )
 			pf = [[self class] defaultPixelFormat];
 		
-		_context = [[CIContext contextWithCGLContext:CGLGetCurrentContext() pixelFormat:[pf CGLPixelFormatObj] options:nil] retain];
+		_context = [[CIContext contextWithCGLContext:CGLGetCurrentContext() pixelFormat:[pf CGLPixelFormatObj] colorSpace:nil options:nil] retain];
 	}
 	
 	[self updateMatrices];

@@ -23,6 +23,8 @@
 	NSTimer *_timer;
 	NSAnimation *_animation;
 	NSString *_imagePath;
+	NSSound *_buzzerSound;
+	float _startingBlockSize;
 	
 	TriviaPlayer *_buzzedPlayer;
 }

@@ -22,7 +22,8 @@
 - (void)getImages
 {
 	[_images removeAllObjects];
-	NSArray *files = [[NSFileManager defaultManager] directoryContentsAtPath:_path];
+	NSError* err;
+	NSArray *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:_path error:&err];
 	
 	NSArray *acceptedFileTypes = [NSImage imageFileTypes];
 	NSEnumerator *fileEnumerator = [files objectEnumerator];
@@ -64,7 +65,14 @@
 
 - (NSString *)getImage
 {
-	return [_path stringByAppendingPathComponent:[_images objectAtIndex:[_table selectedRow]]];
+	if( [_images count] == 0 )
+		return nil;
+	
+	srand(time(NULL));
+	unsigned int randomImageIndex = rand() % [_images count];
+	NSString *imagePath = [_path stringByAppendingPathComponent:[_images objectAtIndex:randomImageIndex]];
+	[_table selectRowIndexes:[NSIndexSet indexSetWithIndex:randomImageIndex] byExtendingSelection:NO];
+	return imagePath;
 }
 - (void)removeImage:(NSString *)stringToRemove
 {

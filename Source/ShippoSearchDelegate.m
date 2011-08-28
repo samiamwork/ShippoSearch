@@ -11,17 +11,24 @@
 
 @implementation ShippoSearchDelegate
 
++ (void)initialize
+{
+	[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:18],@"imageDisplaySeconds",[NSNumber numberWithInt:50],@"startingBlockSize",nil]];
+}
+
 - (void)awakeFromNib
 {
 	[_imageView setImage:nil];	
 	[_imageView setPixelSize:1.0f];
 	
 	_timer = [NSTimer scheduledTimerWithTimeInterval:1.0/30.0f target:self selector:@selector(animationTick:) userInfo:nil repeats:YES];
-	_animation = [[NSAnimation alloc] initWithDuration:15.0 animationCurve:NSAnimationLinear];
+	_animation = [[NSAnimation alloc] initWithDuration:(NSTimeInterval)[[NSUserDefaults standardUserDefaults] integerForKey:@"imageDisplaySeconds"] animationCurve:NSAnimationLinear];
 	[_animation setAnimationBlockingMode:NSAnimationNonblocking];
 	[_playerController setDelegate:self];
 	
 	_buzzedPlayer = nil;
+	
+	_buzzerSound = [[NSSound soundNamed:@"Submarine"] retain];
 }
 
 - (void)dealloc
@@ -29,6 +36,7 @@
 	[_timer invalidate];
 	[_animation release];
 	[_imagePath release];
+	[_buzzerSound release];
 
 	[super dealloc];
 }
@@ -38,7 +46,7 @@
 	if( ![_animation isAnimating] )
 		return;
 	
-	[_imageView setPixelSize:(1.0f-[_animation currentValue])*49.0f+1.0f];
+	[_imageView setPixelSize:(1.0f-sqrtf([_animation currentProgress]))*(_startingBlockSize-1.0f)+1.0f];
 }
 
 - (IBAction)nextImage:(id)sender
@@ -51,8 +59,11 @@
 	[_imageView setImage:newImage];
 	[imageURL release];
 	[newImage release];
-	[_imageView setPixelSize:50.0f];
+	_startingBlockSize = [[NSUserDefaults standardUserDefaults] floatForKey:@"startingBlockSize"];
+	[_imageView setPixelSize:_startingBlockSize];
 	
+	_buzzedPlayer = nil;
+	[_animation setDuration:(NSTimeInterval)[[NSUserDefaults standardUserDefaults] integerForKey:@"imageDisplaySeconds"]];
 	[_animation setCurrentProgress:0.0];
 	[_animation startAnimation];
 	[_playerController setAllPlayersEnabled:YES];
@@ -60,10 +71,20 @@
 
 - (void)playerBuzzed:(TriviaPlayer *)thePlayer
 {
+	if( _buzzedPlayer )
+		return;
+	
 	_buzzedPlayer = thePlayer;
 	[_buzzedPlayerName setStringValue:[thePlayer name]];
 	[_animation stopAnimation];
-	
+	[_buzzerSound play];
+}
+
+- (int)scoreForValue:(float)theValue
+{
+	float score = (1.0f-theValue)*10.0f;
+	score *= score;
+	return (int)score;
 }
 
 - (IBAction)rightAnswer:(id)sender
@@ -71,7 +92,7 @@
 	if( !_buzzedPlayer )
 		return;
 	
-	[_buzzedPlayer addPoints:(int)([_animation currentValue]*30.0f)];
+	[_buzzedPlayer addPoints:[self scoreForValue:[_animation currentProgress]]];
 	[_imageView setPixelSize:1.0f];
 	[_animation setCurrentProgress:0.0];
 	[_playerController setAllPlayersEnabled:NO];
@@ -84,7 +105,7 @@
 	if( !_buzzedPlayer )
 		return;
 	
-	[_buzzedPlayer subtractPoints:(int)([_animation currentValue]*30.0f)];
+	[_buzzedPlayer subtractPoints:[self scoreForValue:[_animation currentProgress]]];
 	[_buzzedPlayer setEnabled:NO];
 	[_animation startAnimation];
 	[_playerController reloadData];

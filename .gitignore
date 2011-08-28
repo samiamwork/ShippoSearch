@@ -10,4 +10,6 @@
 *~.nib
 *.pbxuser
 *.perspective
+*.perspectivev3
+xcuserdata
 build
