@@ -107,7 +107,10 @@
 	
 	[_buzzedPlayer subtractPoints:[self scoreForValue:[_animation currentProgress]]];
 	[_buzzedPlayer setEnabled:NO];
-	[_animation startAnimation];
+	if([_animation currentProgress] < 1.0)
+	{
+		[_animation startAnimation];
+	}
 	[_playerController reloadData];
 	[_buzzedPlayerName setStringValue:@""];
 	_buzzedPlayer = nil;
