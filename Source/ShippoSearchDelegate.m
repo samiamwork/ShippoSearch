@@ -13,7 +13,12 @@
 
 + (void)initialize
 {
-	[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:18],@"imageDisplaySeconds",[NSNumber numberWithInt:50],@"startingBlockSize",nil]];
+	NSDictionary* defaults = [NSDictionary dictionaryWithObjectsAndKeys:
+							  [NSNumber numberWithInt:18],@"imageDisplaySeconds",
+							  [NSNumber numberWithInt:50],@"startingBlockSize",
+							  [NSNumber numberWithInt:0],@"minimumValue",
+							  nil];
+	[[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
 }
 
 - (void)awakeFromNib
@@ -103,6 +108,11 @@
 {
 	float score = (1.0f-theValue)*10.0f;
 	score *= score;
+	NSInteger minimumValue = [[NSUserDefaults standardUserDefaults] integerForKey:@"minimumValue"];
+	if(score < minimumValue)
+	{
+		score = minimumValue;
+	}
 	return (int)score;
 }
 
