@@ -47,12 +47,25 @@
 	[super dealloc];
 }
 
+- (int)scoreForValue:(float)theValue
+{
+	float score = (1.0f-theValue)*10.0f;
+	score *= score;
+	NSInteger minimumValue = [[NSUserDefaults standardUserDefaults] integerForKey:@"minimumValue"];
+	if(score < minimumValue)
+	{
+		score = minimumValue;
+	}
+	return (int)score;
+}
+
 - (void)animationTick:(NSTimer *)theTimer
 {
 	if( ![_animation isAnimating] )
 		return;
 	
 	[_imageView setPixelSize:(1.0f-sqrtf([_animation currentProgress]))*(_startingBlockSize-1.0f)+1.0f];
+	[_pointValueField setIntValue:[self scoreForValue:[_animation currentProgress]]];
 }
 
 - (IBAction)pause:(id)sender
@@ -102,18 +115,6 @@
 	[_buzzedPlayerName setStringValue:[thePlayer name]];
 	[_animation stopAnimation];
 	[_buzzerSound play];
-}
-
-- (int)scoreForValue:(float)theValue
-{
-	float score = (1.0f-theValue)*10.0f;
-	score *= score;
-	NSInteger minimumValue = [[NSUserDefaults standardUserDefaults] integerForKey:@"minimumValue"];
-	if(score < minimumValue)
-	{
-		score = minimumValue;
-	}
-	return (int)score;
 }
 
 - (IBAction)rightAnswer:(id)sender

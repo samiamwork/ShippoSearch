@@ -19,6 +19,7 @@
 	IBOutlet PlayerController *_playerController;
 	IBOutlet NSTextField *_buzzedPlayerName;
 	IBOutlet TIPFreeWindow *_gameWindow;
+	IBOutlet NSTextField *_pointValueField;
 	
 	NSTimer *_timer;
 	NSAnimation *_animation;
