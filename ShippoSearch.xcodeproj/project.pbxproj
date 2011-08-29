@@ -24,7 +24,6 @@
 		3E584C200C7150990093CD10 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3E584C1E0C7150990093CD10 /* Credits.rtf */; };
 		3E6200020CADCC7D001A1C73 /* FullscreenSheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6200010CADCC7D001A1C73 /* FullscreenSheetController.m */; };
 		3E6200050CADCC9B001A1C73 /* TIPScreenSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6200040CADCC9B001A1C73 /* TIPScreenSelectionView.m */; };
-		3E6200350CADF5F7001A1C73 /* TIPGradient.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E6200330CADF5F7001A1C73 /* TIPGradient.c */; };
 		3E62007C0CADF803001A1C73 /* FullscreenSheet.nib in Resources */ = {isa = PBXBuildFile; fileRef = 3E62007A0CADF803001A1C73 /* FullscreenSheet.nib */; };
 		3E62FF1B0CADB24B001A1C73 /* PlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E62FF1A0CADB24B001A1C73 /* PlayerController.m */; };
 		3E62FFC00CADCB92001A1C73 /* TIPFreeWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E62FFBF0CADCB92001A1C73 /* TIPFreeWindow.m */; };
@@ -67,8 +66,6 @@
 		3E6200010CADCC7D001A1C73 /* FullscreenSheetController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = FullscreenSheetController.m; sourceTree = "<group>"; };
 		3E6200030CADCC9B001A1C73 /* TIPScreenSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TIPScreenSelectionView.h; sourceTree = "<group>"; };
 		3E6200040CADCC9B001A1C73 /* TIPScreenSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TIPScreenSelectionView.m; sourceTree = "<group>"; };
-		3E6200330CADF5F7001A1C73 /* TIPGradient.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = TIPGradient.c; sourceTree = "<group>"; };
-		3E6200340CADF5F7001A1C73 /* TIPGradient.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TIPGradient.h; sourceTree = "<group>"; };
 		3E62007B0CADF803001A1C73 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/FullscreenSheet.nib; sourceTree = "<group>"; };
 		3E62FF190CADB24B001A1C73 /* PlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerController.h; sourceTree = "<group>"; };
 		3E62FF1A0CADB24B001A1C73 /* PlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerController.m; sourceTree = "<group>"; };
@@ -206,8 +203,6 @@
 		45FC53AB08FBFB490091ABDF /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				3E6200330CADF5F7001A1C73 /* TIPGradient.c */,
-				3E6200340CADF5F7001A1C73 /* TIPGradient.h */,
 				3E2196490CAD7D6D0059FEF2 /* TriviaPlayer.h */,
 				3E21964A0CAD7D6D0059FEF2 /* TriviaPlayer.m */,
 				3E6200060CADCCA5001A1C73 /* Fullscreen */,
@@ -355,7 +350,6 @@
 				3E62FFC00CADCB92001A1C73 /* TIPFreeWindow.m in Sources */,
 				3E6200020CADCC7D001A1C73 /* FullscreenSheetController.m in Sources */,
 				3E6200050CADCC9B001A1C73 /* TIPScreenSelectionView.m in Sources */,
-				3E6200350CADF5F7001A1C73 /* TIPGradient.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +474,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_VERSION = 1.0a1;
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				SDKROOT = macosx10.6;
 			};
 			name = Debug;

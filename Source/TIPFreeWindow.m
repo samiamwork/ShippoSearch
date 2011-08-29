@@ -2,7 +2,7 @@
 
 @implementation TIPFreeWindow
 
-- (id)initWithContentRect:(NSRect)contentRect styleMask:(unsigned int)styleMask backing:(NSBackingStoreType)bufferingType defer:(BOOL)deferCreation
+- (id)initWithContentRect:(NSRect)contentRect styleMask:(NSUInteger)styleMask backing:(NSBackingStoreType)bufferingType defer:(BOOL)deferCreation
 {
 	if( (self = [super initWithContentRect:contentRect styleMask:styleMask backing:bufferingType defer:deferCreation]) ) {
 		_fullscreenController = [[FullscreenSheetController alloc] init];

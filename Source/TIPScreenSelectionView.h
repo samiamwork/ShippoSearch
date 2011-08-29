@@ -7,7 +7,6 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "TIPGradient.h"
 
 @interface TIPScreenSelectionView : NSView
 {

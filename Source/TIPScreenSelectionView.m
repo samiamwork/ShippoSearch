@@ -159,11 +159,10 @@ static float hilightColor[] = {0.7f, 0.2f, 0.2f, 1.0f};
 	if( ![self getScreenConfiguration] )
 		return;
 	
-	NSPoint rP = NSMakePoint(NSMidX(bounds),0.0f);
-	TIPMutableGradientRef bgGradientRef = TIPMutableGradientCreate();
-	TIPGradientAddRGBColorStop( bgGradientRef,0.0f, 1.0f,1.0f,1.0f,1.0f);
-	TIPGradientAddRGBColorStop( bgGradientRef,1.0f, 0.8f,0.8f,0.8f,1.0f);
-	TIPGradientRadialFillRect( cxt, bgGradientRef, *(CGRect *)&bounds,*(CGPoint *)&rP,sqrtf(rP.x*rP.x + bounds.size.height*bounds.size.height));
+	NSGradient* bgGradient = [[NSGradient alloc] initWithStartingColor:[NSColor colorWithCalibratedWhite:1.0 alpha:1.0]
+														   endingColor:[NSColor colorWithCalibratedWhite:0.8 alpha:1.0]];
+	[bgGradient drawInRect:bounds relativeCenterPosition:NSZeroPoint];
+	[bgGradient release];
 	
 	[self createTransformMatrix:cxt];
 	
@@ -172,10 +171,9 @@ static float hilightColor[] = {0.7f, 0.2f, 0.2f, 1.0f};
 	lineSize = [screenToView transformSize:lineSize];
 	CGContextSetLineWidth(cxt, lineSize.width);
 	
-	TIPMutableGradientRef screenGradientRef = TIPMutableGradientCreate();
-	TIPGradientAddRGBColorStop( screenGradientRef,0.0f, 0.9f,0.9f,1.0f,1.0f);
-	TIPGradientAddRGBColorStop( screenGradientRef,1.0f, 0.8f,0.8f,1.0f,1.0f);
-	
+	NSGradient* screenGradient = [[NSGradient alloc] initWithStartingColor:[NSColor colorWithCalibratedRed:0.9 green:0.9 blue:1.0 alpha:1.0]
+															   endingColor:[NSColor colorWithCalibratedRed:0.8 green:0.8 blue:0.8 alpha:1.0]];
+
 	NSScreen *menuScreen = [allScreens objectAtIndex:0];
 	CGContextSetLineWidth( cxt, 4.0f);
 	CGContextSetRGBFillColor( cxt, 1.0f,1.0f,1.0f,1.0f );
@@ -188,9 +186,9 @@ static float hilightColor[] = {0.7f, 0.2f, 0.2f, 1.0f};
 		aScreenRect.size = [screenToView transformSize:aScreenRect.size];
 		aScreenRect.origin = [screenToView transformPoint:aScreenRect.origin];
 		aScreenRect = NSIntegralRect(aScreenRect);
-		
-		TIPGradientAxialFillRect( cxt, screenGradientRef, *(CGRect *)&aScreenRect,85.0f);
-		CGContextClipToRect( cxt, *(CGRect *)&aScreenRect);
+
+		[screenGradient drawInRect:aScreenRect relativeCenterPosition:NSZeroPoint];
+		CGContextClipToRect( cxt, NSRectToCGRect(aScreenRect));
 		
 		if( aScreen == menuScreen ) {
 			NSRect menuRect, remainderRect;
@@ -211,6 +209,7 @@ static float hilightColor[] = {0.7f, 0.2f, 0.2f, 1.0f};
 		
 		CGContextRestoreGState(cxt);
 	}
+	[screenGradient release];
 	
 	CGContextRestoreGState(cxt);
 }
