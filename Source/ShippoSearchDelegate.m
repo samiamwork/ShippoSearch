@@ -137,7 +137,11 @@
 	
 	[_buzzedPlayer subtractPoints:[self scoreForValue:[_animation currentProgress]]];
 	[_buzzedPlayer setEnabled:NO];
-	if([_animation currentProgress] < 1.0)
+	if([_playerController allPlayersDisabled])
+	{
+		[_imageView setPixelSize:1.0f];
+	}
+	else if([_animation currentProgress] < 1.0)
 	{
 		[_animation startAnimation];
 	}

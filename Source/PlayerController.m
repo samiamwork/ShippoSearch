@@ -106,6 +106,18 @@
 		[aPlayer setEnabled:willEnable];
 }
 
+- (BOOL)allPlayersDisabled
+{
+	for(TriviaPlayer* aPlayer in _players)
+	{
+		if([aPlayer enabled])
+		{
+			return NO;
+		}
+	}
+	return YES;
+}
+
 #pragma mark TableView datasource Methods
 
 - (int)numberOfRowsInTableView:(NSTableView *)aTableView

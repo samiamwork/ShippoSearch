@@ -30,6 +30,7 @@
 - (void)reloadData;
 
 - (void)setAllPlayersEnabled:(BOOL)willEnable;
+- (BOOL)allPlayersDisabled;
 @end
 
 @interface NSObject (PlayerDelegate)
