@@ -97,13 +97,19 @@
 	screenToView = [[NSAffineTransform alloc] init];
 	
 	[screenToView translateXBy:-totalBounds.origin.x yBy:-totalBounds.origin.y];
-	
-	// Find the largest dimension of the totalBounds so it all will fit in the view
-	if( totalBounds.size.width > totalBounds.size.height )
-		scale = bounds.size.width/totalBounds.size.width;
-	else
+
+	// Set the scale to fit all the screens in the view
+	float viewAspectRatio = bounds.size.width/bounds.size.height;
+	float screenBoundsAspectRatio = totalBounds.size.width/totalBounds.size.height;
+	if(screenBoundsAspectRatio < viewAspectRatio)
+	{
 		scale = bounds.size.height/totalBounds.size.height;
-	
+	}
+	else
+	{
+		scale = bounds.size.width/totalBounds.size.width;
+	}
+
 	[trans scaleBy:scale*0.9f];
 	[screenToView appendTransform:trans];
 	
