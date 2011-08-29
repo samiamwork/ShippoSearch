@@ -90,6 +90,12 @@
 	_paused = NO;
 	[_imageController removeImage:_imagePath];
 	_imagePath = [[_imageController getImage] retain];
+	if(_imagePath == nil)
+	{
+		[_imageView setImage:nil];
+		[_resolvedImageView setImage:nil];
+		return;
+	}
 	
 	NSURL *imageURL = [[NSURL alloc] initFileURLWithPath:_imagePath];
 	CIImage *newImage =  [[CIImage alloc] initWithContentsOfURL:imageURL];
