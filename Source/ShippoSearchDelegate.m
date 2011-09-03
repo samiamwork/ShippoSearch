@@ -7,6 +7,7 @@
 //
 
 #import "ShippoSearchDelegate.h"
+#import "PlayerConnectionValueTransformer.h"
 
 
 @implementation ShippoSearchDelegate
@@ -19,6 +20,11 @@
 							  [NSNumber numberWithInt:0],@"minimumValue",
 							  nil];
 	[[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
+
+	// Register value transformers
+	PlayerConnectionValueTransformer* connectionTransformer = [[PlayerConnectionValueTransformer alloc] init];
+	[NSValueTransformer setValueTransformer:connectionTransformer forName:@"PlayerConnectionValueTransformer"];
+	[connectionTransformer release];
 }
 
 - (void)awakeFromNib

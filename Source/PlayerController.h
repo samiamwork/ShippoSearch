@@ -27,6 +27,8 @@
 - (IBAction)setButton:(id)sender;
 - (void)reloadData;
 
+- (NSArray*)players;
+
 - (void)setAllPlayersEnabled:(BOOL)willEnable;
 - (BOOL)allPlayersDisabled;
 @end

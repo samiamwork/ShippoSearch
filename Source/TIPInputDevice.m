@@ -54,6 +54,13 @@
 			[_delegate TIPInputDevice:self buttonPressed:[_elements objectForKey:cookie]];
 		}
 	}
+	else if(IOHIDValueGetIntegerValue(value) == 0)
+	{
+		if(_delegate != nil)
+		{
+			[_delegate TIPInputDevice:self buttonReleased:[_elements objectForKey:cookie]];
+		}
+	}
 }
 
 static void HIDValueCallback(void *ctx, IOReturn result, void *sender, IOHIDValueRef value)

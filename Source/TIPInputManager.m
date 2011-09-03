@@ -158,6 +158,18 @@ void HIDRemoveDevice(void* ctx, IOReturn result, void* sender, IOHIDDeviceRef de
 	}
 }
 
+- (void)TIPInputDevice:(TIPInputDevice*)theDevice buttonReleased:(TIPInputElement*)theElement
+{
+	if(_elementCheckTimer != nil)
+	{
+		return;
+	}
+	if(_delegate != nil)
+	{
+		[_delegate inputManager:self elementReleased:theElement];
+	}
+}
+
 #pragma mark C USB functions
 
 void HIDAddDevice(void* ctx, IOReturn result, void* sender, IOHIDDeviceRef device)

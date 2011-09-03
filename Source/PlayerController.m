@@ -44,19 +44,26 @@
 	[_table reloadData];
 }
 
+- (NSArray*)players
+{
+	return _players;
+}
+
 - (void)awakeFromNib
 {
 }
 
 - (IBAction)addPlayer:(id)sender
 {
+	[self willChangeValueForKey:@"players"];
 	[_players addObject:[[[TriviaPlayer alloc] init] autorelease]];
-	[_table reloadData];
+	[self didChangeValueForKey:@"players"];
 }
 - (IBAction)removePlayer:(id)sender
 {
+	[self willChangeValueForKey:@"players"];
 	[_players removeObjectAtIndex:[_table selectedRow]];
-	[_table reloadData];
+	[self didChangeValueForKey:@"players"];
 }
 - (IBAction)setButton:(id)sender
 {
@@ -74,9 +81,25 @@
 {
 	for(TriviaPlayer* aPlayer in _players)
 	{
-		if([aPlayer inputElement] == element && [aPlayer enabled] && _delegate != nil && [_delegate respondsToSelector:@selector(playerBuzzed:)])
+		if([aPlayer inputElement] == element)
 		{
-			[_delegate playerBuzzed:aPlayer];
+			[aPlayer setPressed:YES];
+			if([aPlayer enabled] && _delegate != nil && [_delegate respondsToSelector:@selector(playerBuzzed:)])
+			{
+				[_delegate playerBuzzed:aPlayer];
+			}
+			break;
+		}
+	}
+}
+
+- (void)inputManager:(TIPInputManager *)inputManager elementReleased:(TIPInputElement *)element
+{
+	for(TriviaPlayer* aPlayer in _players)
+	{
+		if([aPlayer inputElement] == element)
+		{
+			[aPlayer setPressed:NO];
 			break;
 		}
 	}
@@ -110,40 +133,6 @@
 		}
 	}
 	return YES;
-}
-
-#pragma mark TableView datasource Methods
-
-- (int)numberOfRowsInTableView:(NSTableView *)aTableView
-{
-	return [_players count];
-}
-
-- (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex
-{
-	TriviaPlayer *thePlayer = [_players objectAtIndex:rowIndex];
-	
-	if( [[aTableColumn identifier] isEqualToString:@"status"] )
-		return [thePlayer isConnected] ? [NSImage imageNamed:@"jewel green"] : [NSImage imageNamed:@"jewel red"];
-	else if( [[aTableColumn identifier] isEqualToString:@"name"] )
-		return [thePlayer name];
-	else if( [[aTableColumn identifier] isEqualToString:@"score"] )
-		return [NSNumber numberWithInt:[thePlayer points]];
-	
-	return nil;
-}
-
-- (void)tableView:(NSTableView *)aTableView setObjectValue:(id)anObject forTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex
-{
-	TriviaPlayer *thePlayer = [_players objectAtIndex:rowIndex];
-	if( !thePlayer )
-		return;
-	
-	if( [[aTableColumn identifier] isEqualToString:@"name"] )
-		[thePlayer setName:anObject];
-	else if( [[aTableColumn identifier] isEqualToString:@"score"] )
-		[thePlayer setPoints:[(NSString *)anObject intValue]];
-	
 }
 
 @end

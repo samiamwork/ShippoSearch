@@ -23,6 +23,7 @@
 @protocol TIPInputManagerDelegate
 - (void)elementSearchFinished:(TIPInputElement*)foundElement;
 - (void)inputManager:(TIPInputManager*)inputManager elementPressed:(TIPInputElement*)element;
+- (void)inputManager:(TIPInputManager *)inputManager elementReleased:(TIPInputElement *)element;
 @end
 
 @interface TIPInputManager : NSObject<TIPInputDeviceDelegate> {

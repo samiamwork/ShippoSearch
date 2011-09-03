@@ -12,6 +12,7 @@
 @class TIPInputDevice;
 @protocol TIPInputDeviceDelegate
 - (void)TIPInputDevice:(TIPInputDevice*)theDevice buttonPressed:(TIPInputElement*)theElement;
+- (void)TIPInputDevice:(TIPInputDevice*)theDevice buttonReleased:(TIPInputElement*)theElement;
 @end
 
 

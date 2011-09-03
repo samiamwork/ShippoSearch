@@ -14,8 +14,6 @@
 		3E2196000CAD7A020059FEF2 /* TriviaPlayerGetInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2195FF0CAD7A020059FEF2 /* TriviaPlayerGetInputController.m */; };
 		3E2196410CAD7C4D0059FEF2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2196400CAD7C4D0059FEF2 /* IOKit.framework */; };
 		3E21964B0CAD7D6D0059FEF2 /* TriviaPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E21964A0CAD7D6D0059FEF2 /* TriviaPlayer.m */; };
-		3E2196540CAD808E0059FEF2 /* jewel green.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3E2196520CAD808E0059FEF2 /* jewel green.pdf */; };
-		3E2196550CAD808E0059FEF2 /* jewel red.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3E2196530CAD808E0059FEF2 /* jewel red.pdf */; };
 		3E2196630CAD924A0059FEF2 /* ImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2196620CAD924A0059FEF2 /* ImageController.m */; };
 		3E24CC910CAC2F6100087922 /* ShippoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E24CC900CAC2F6100087922 /* ShippoView.m */; };
 		3E24CC960CAC2FE600087922 /* CIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E24CC950CAC2FE600087922 /* CIView.m */; };
@@ -27,6 +25,10 @@
 		3E62007C0CADF803001A1C73 /* FullscreenSheet.nib in Resources */ = {isa = PBXBuildFile; fileRef = 3E62007A0CADF803001A1C73 /* FullscreenSheet.nib */; };
 		3E62FF1B0CADB24B001A1C73 /* PlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E62FF1A0CADB24B001A1C73 /* PlayerController.m */; };
 		3E62FFC00CADCB92001A1C73 /* TIPFreeWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E62FFBF0CADCB92001A1C73 /* TIPFreeWindow.m */; };
+		3EF399C21412A46A00BC8B53 /* jewel blue.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 3EF399BF1412A46A00BC8B53 /* jewel blue.tiff */; };
+		3EF399C31412A46A00BC8B53 /* jewel green.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 3EF399C01412A46A00BC8B53 /* jewel green.tiff */; };
+		3EF399C41412A46A00BC8B53 /* jewel red.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 3EF399C11412A46A00BC8B53 /* jewel red.tiff */; };
+		3EF399C71412A8D700BC8B53 /* PlayerConnectionValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF399C61412A8D700BC8B53 /* PlayerConnectionValueTransformer.m */; };
 		45FC53AE08FBFB490091ABDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 45FC53A608FBFB490091ABDF /* InfoPlist.strings */; };
 		45FC53AF08FBFB490091ABDF /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 45FC53A808FBFB490091ABDF /* MainMenu.nib */; };
 		45FC53B108FBFB490091ABDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FC53AC08FBFB490091ABDF /* main.m */; };
@@ -51,8 +53,6 @@
 		3E2196400CAD7C4D0059FEF2 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
 		3E2196490CAD7D6D0059FEF2 /* TriviaPlayer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TriviaPlayer.h; sourceTree = "<group>"; };
 		3E21964A0CAD7D6D0059FEF2 /* TriviaPlayer.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TriviaPlayer.m; sourceTree = "<group>"; };
-		3E2196520CAD808E0059FEF2 /* jewel green.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "jewel green.pdf"; sourceTree = "<group>"; };
-		3E2196530CAD808E0059FEF2 /* jewel red.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "jewel red.pdf"; sourceTree = "<group>"; };
 		3E2196610CAD924A0059FEF2 /* ImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageController.h; sourceTree = "<group>"; };
 		3E2196620CAD924A0059FEF2 /* ImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageController.m; sourceTree = "<group>"; };
 		3E24CC8F0CAC2F6100087922 /* ShippoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShippoView.h; sourceTree = "<group>"; };
@@ -71,6 +71,11 @@
 		3E62FF1A0CADB24B001A1C73 /* PlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerController.m; sourceTree = "<group>"; };
 		3E62FFBE0CADCB92001A1C73 /* TIPFreeWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TIPFreeWindow.h; sourceTree = "<group>"; };
 		3E62FFBF0CADCB92001A1C73 /* TIPFreeWindow.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TIPFreeWindow.m; sourceTree = "<group>"; };
+		3EF399BF1412A46A00BC8B53 /* jewel blue.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "jewel blue.tiff"; sourceTree = "<group>"; };
+		3EF399C01412A46A00BC8B53 /* jewel green.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "jewel green.tiff"; sourceTree = "<group>"; };
+		3EF399C11412A46A00BC8B53 /* jewel red.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "jewel red.tiff"; sourceTree = "<group>"; };
+		3EF399C51412A8D600BC8B53 /* PlayerConnectionValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerConnectionValueTransformer.h; sourceTree = "<group>"; };
+		3EF399C61412A8D700BC8B53 /* PlayerConnectionValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerConnectionValueTransformer.m; sourceTree = "<group>"; };
 		45FC53A708FBFB490091ABDF /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		45FC53A908FBFB490091ABDF /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		45FC53AA08FBFB490091ABDF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -187,8 +192,9 @@
 		45FC53A508FBFB490091ABDF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3E2196520CAD808E0059FEF2 /* jewel green.pdf */,
-				3E2196530CAD808E0059FEF2 /* jewel red.pdf */,
+				3EF399BF1412A46A00BC8B53 /* jewel blue.tiff */,
+				3EF399C01412A46A00BC8B53 /* jewel green.tiff */,
+				3EF399C11412A46A00BC8B53 /* jewel red.tiff */,
 				3E584C1E0C7150990093CD10 /* Credits.rtf */,
 				65464FC00A9A486600F418E3 /* AppleScriptInfo.sdef */,
 				45FC53A608FBFB490091ABDF /* InfoPlist.strings */,
@@ -216,6 +222,8 @@
 				3E2196620CAD924A0059FEF2 /* ImageController.m */,
 				3E62FF190CADB24B001A1C73 /* PlayerController.h */,
 				3E62FF1A0CADB24B001A1C73 /* PlayerController.m */,
+				3EF399C51412A8D600BC8B53 /* PlayerConnectionValueTransformer.h */,
+				3EF399C61412A8D700BC8B53 /* PlayerConnectionValueTransformer.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -277,9 +285,10 @@
 				65464FC10A9A486600F418E3 /* AppleScriptInfo.sdef in Resources */,
 				3E584C200C7150990093CD10 /* Credits.rtf in Resources */,
 				3E2195FD0CAD793E0059FEF2 /* GetInput.nib in Resources */,
-				3E2196540CAD808E0059FEF2 /* jewel green.pdf in Resources */,
-				3E2196550CAD808E0059FEF2 /* jewel red.pdf in Resources */,
 				3E62007C0CADF803001A1C73 /* FullscreenSheet.nib in Resources */,
+				3EF399C21412A46A00BC8B53 /* jewel blue.tiff in Resources */,
+				3EF399C31412A46A00BC8B53 /* jewel green.tiff in Resources */,
+				3EF399C41412A46A00BC8B53 /* jewel red.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +344,7 @@
 				3E62FFC00CADCB92001A1C73 /* TIPFreeWindow.m in Sources */,
 				3E6200020CADCC7D001A1C73 /* FullscreenSheetController.m in Sources */,
 				3E6200050CADCC9B001A1C73 /* TIPScreenSelectionView.m in Sources */,
+				3EF399C71412A8D700BC8B53 /* PlayerConnectionValueTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
