@@ -9,13 +9,11 @@
 #import <Cocoa/Cocoa.h>
 #import "TriviaPlayer.h"
 #import "TriviaPlayerGetInputController.h"
+#import "TIPInputManager.h"
 
-@interface PlayerController : NSObject {
+@interface PlayerController : NSObject<TIPInputManagerDelegate> {
 	IBOutlet NSTableView *_table;
-	
 	NSMutableArray *_players;
-	NSTimer *_pollingTimer;
-	
 	id _delegate;
 	
 	TriviaPlayerGetInputController *_getInputController;

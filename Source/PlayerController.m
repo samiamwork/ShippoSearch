@@ -15,7 +15,6 @@
 {
 	if( (self = [super init]) ) {
 		_players = [[NSMutableArray alloc] init];
-		_pollingTimer = [NSTimer scheduledTimerWithTimeInterval:1.0/30.0 target:self selector:@selector(pollingTick:) userInfo:nil repeats:YES];
 		_getInputController = [[TriviaPlayerGetInputController alloc] init];
 		[[TIPInputManager defaultManager] setDelegate:self];
 	}
@@ -26,7 +25,6 @@
 - (void)dealloc
 {
 	[_players release];
-	[_pollingTimer invalidate];
 	[_getInputController release];
 
 	[super dealloc];
@@ -39,22 +37,6 @@
 - (void)setDelegate:(id)newDelegate
 {
 	_delegate = newDelegate;
-}
-
-- (void)pollingTick:(NSTimer *)theTimer
-{
-	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-	NSEnumerator *playerEnumerator = [_players objectEnumerator];
-	TriviaPlayer *aPlayer;
-	while( (aPlayer = [playerEnumerator nextObject]) ) {
-		if( [aPlayer isButtonPressed] )
-			break;
-	}
-	
-	if( aPlayer && [_delegate respondsToSelector:@selector(playerBuzzed:)] )
-		[_delegate playerBuzzed:aPlayer];
-	
-	[pool release];
 }
 
 - (void)reloadData
@@ -86,6 +68,18 @@
 	[[TIPInputManager defaultManager] getAnyElementWithTimeout:10.0];
 	
 	[_getInputController beginModalStatus];
+}
+
+- (void)inputManager:(TIPInputManager *)inputManager elementPressed:(TIPInputElement *)element
+{
+	for(TriviaPlayer* aPlayer in _players)
+	{
+		if([aPlayer inputElement] == element && [aPlayer enabled] && _delegate != nil && [_delegate respondsToSelector:@selector(playerBuzzed:)])
+		{
+			[_delegate playerBuzzed:aPlayer];
+			break;
+		}
+	}
 }
 
 - (void)elementSearchFinished:(TIPInputElement *)foundElement

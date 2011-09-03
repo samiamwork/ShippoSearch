@@ -108,8 +108,7 @@
 {
 	if( newElement == inputElement )
 		return;
-	
-	//printf("%s: u = %ld, up = %ld\n", [theName cString], [newElement usage], [newElement usagePage] );
+
 	if( inputElement != nil )
 		[[NSNotificationCenter defaultCenter] removeObserver:self
 														name:@"TIPInputDeviceDisconnected"
@@ -123,26 +122,11 @@
 	[inputElement release];
 	inputElement = [newElement retain];
 	[self didChangeValueForKey:@"isConnected"];
-	
 }
 
 - (void)deviceDisconnected:(NSNotification *)aNotification
 {
 	[self setInputElement:nil];
-}
-
-- (BOOL)isButtonPressed
-{
-	if( !enabled || inputElement == nil )
-		return NO;
-	
-	long value = [inputElement getValue];
-	if( value ) {
-		[[NSNotificationCenter defaultCenter] postNotificationName:@"TIPTriviaPlayerBuzzed" object:self];
-		return YES;
-	}
-
-	return  NO;
 }
 
 // light up for buttons pressed

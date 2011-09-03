@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "TIPInputDevice.h"
+#import <IOKit/hid/IOHIDLib.h>
 //#import "TriviaSoundController.h"
 
 /*!
@@ -18,12 +19,21 @@
 	Currently this is only designed to support HID devices (specifically gamepads and joysticks).
 */
 
-@interface TIPInputManager : NSObject {
+@class TIPInputManager;
+@protocol TIPInputManagerDelegate
+- (void)elementSearchFinished:(TIPInputElement*)foundElement;
+- (void)inputManager:(TIPInputManager*)inputManager elementPressed:(TIPInputElement*)element;
+@end
+
+@interface TIPInputManager : NSObject<TIPInputDeviceDelegate> {
+	IOHIDManagerRef _hidManager;
+	BOOL            _waitingForNewButton;
+	NSMutableSet*   _devices;
+
 	io_iterator_t addedDeviceIterator;
 	io_iterator_t removedDeviceIterator;
 	
-	NSMutableArray *deviceArray;
-	id _delegate;
+	NSObject<TIPInputManagerDelegate>* _delegate;
 	NSTimeInterval _elementCheckTimeout;
 	NSTimeInterval _startTime;
 	NSTimer *_elementCheckTimer;
@@ -38,10 +48,9 @@
 
 + (TIPInputManager *)defaultManager;
 
-- (id)delegate;
-- (void)setDelegate:(id)newDelegate;
-- (NSArray *)devices;
+- (void)setDelegate:(NSObject<TIPInputManagerDelegate>*)newDelegate;
 - (void)getAnyElementWithTimeout:(NSTimeInterval)timeout;
+- (void)TIPInputDevice:(TIPInputDevice*)theDevice buttonPressed:(TIPInputElement*)theElement;
 @end
 
 

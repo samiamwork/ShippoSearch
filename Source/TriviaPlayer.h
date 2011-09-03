@@ -34,5 +34,4 @@
 
 - (TIPInputElement *)inputElement;
 - (void)setInputElement:(TIPInputElement *)newElement;
-- (BOOL)isButtonPressed;
 @end
