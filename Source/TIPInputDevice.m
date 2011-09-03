@@ -41,7 +41,7 @@
 		return;
 	}
 
-	NSNumber* cookie = [NSNumber numberWithUnsignedInteger:IOHIDElementGetCookie(theElement)];
+	NSNumber* cookie = [NSNumber numberWithUnsignedInteger:(NSUInteger)IOHIDElementGetCookie(theElement)];
 	if([_elements objectForKey:cookie] == nil)
 	{
 		TIPInputElement* newElement = [TIPInputElement elementWithElementRef:theElement device:self];
