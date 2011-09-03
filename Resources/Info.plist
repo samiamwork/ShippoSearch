@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array/>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleGetInfoString</key>
@@ -11,7 +13,7 @@
 	<key>CFBundleIconFile</key>
 	<string>ShippoSearch</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.YourCompanyHere.ShippoSearch</string>
+	<string>com.theidiotproject.ShippoSearch</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>
@@ -20,6 +22,8 @@
 	<string>${APPLICATION_VERSION}</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array/>
 	<key>CFBundleVersion</key>
 	<string>0</string>
 	<key>LSEnvironment</key>
@@ -33,7 +37,13 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>NSServices</key>
+	<array/>
 	<key>OSAScriptingDefinition</key>
 	<string>AppleScriptInfo.sdef</string>
+	<key>UTExportedTypeDeclarations</key>
+	<array/>
+	<key>UTImportedTypeDeclarations</key>
+	<array/>
 </dict>
 </plist>
