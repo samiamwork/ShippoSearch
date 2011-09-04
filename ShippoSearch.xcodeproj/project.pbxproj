@@ -15,8 +15,6 @@
 		3E2196410CAD7C4D0059FEF2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2196400CAD7C4D0059FEF2 /* IOKit.framework */; };
 		3E21964B0CAD7D6D0059FEF2 /* TriviaPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E21964A0CAD7D6D0059FEF2 /* TriviaPlayer.m */; };
 		3E2196630CAD924A0059FEF2 /* ImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2196620CAD924A0059FEF2 /* ImageController.m */; };
-		3E24CC910CAC2F6100087922 /* ShippoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E24CC900CAC2F6100087922 /* ShippoView.m */; };
-		3E24CC960CAC2FE600087922 /* CIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E24CC950CAC2FE600087922 /* CIView.m */; };
 		3E24CCA90CAC33D300087922 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E24CCA70CAC33D300087922 /* OpenGL.framework */; };
 		3E24CCAA0CAC33D300087922 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E24CCA80CAC33D300087922 /* QuartzCore.framework */; };
 		3E584C200C7150990093CD10 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3E584C1E0C7150990093CD10 /* Credits.rtf */; };
@@ -29,6 +27,7 @@
 		3EF399C31412A46A00BC8B53 /* jewel green.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 3EF399C01412A46A00BC8B53 /* jewel green.tiff */; };
 		3EF399C41412A46A00BC8B53 /* jewel red.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 3EF399C11412A46A00BC8B53 /* jewel red.tiff */; };
 		3EF399C71412A8D700BC8B53 /* PlayerConnectionValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF399C61412A8D700BC8B53 /* PlayerConnectionValueTransformer.m */; };
+		3EF399CE1412F8EC00BC8B53 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF399CD1412F8EB00BC8B53 /* GameView.m */; };
 		45FC53AE08FBFB490091ABDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 45FC53A608FBFB490091ABDF /* InfoPlist.strings */; };
 		45FC53AF08FBFB490091ABDF /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 45FC53A808FBFB490091ABDF /* MainMenu.nib */; };
 		45FC53B108FBFB490091ABDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FC53AC08FBFB490091ABDF /* main.m */; };
@@ -55,10 +54,6 @@
 		3E21964A0CAD7D6D0059FEF2 /* TriviaPlayer.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TriviaPlayer.m; sourceTree = "<group>"; };
 		3E2196610CAD924A0059FEF2 /* ImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageController.h; sourceTree = "<group>"; };
 		3E2196620CAD924A0059FEF2 /* ImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageController.m; sourceTree = "<group>"; };
-		3E24CC8F0CAC2F6100087922 /* ShippoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShippoView.h; sourceTree = "<group>"; };
-		3E24CC900CAC2F6100087922 /* ShippoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShippoView.m; sourceTree = "<group>"; };
-		3E24CC940CAC2FE600087922 /* CIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIView.h; sourceTree = "<group>"; };
-		3E24CC950CAC2FE600087922 /* CIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIView.m; sourceTree = "<group>"; };
 		3E24CCA70CAC33D300087922 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		3E24CCA80CAC33D300087922 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /System/Library/Frameworks/QuartzCore.framework; sourceTree = "<absolute>"; };
 		3E584C1F0C7150990093CD10 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
@@ -76,6 +71,8 @@
 		3EF399C11412A46A00BC8B53 /* jewel red.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "jewel red.tiff"; sourceTree = "<group>"; };
 		3EF399C51412A8D600BC8B53 /* PlayerConnectionValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerConnectionValueTransformer.h; sourceTree = "<group>"; };
 		3EF399C61412A8D700BC8B53 /* PlayerConnectionValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerConnectionValueTransformer.m; sourceTree = "<group>"; };
+		3EF399CC1412F8EB00BC8B53 /* GameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
+		3EF399CD1412F8EB00BC8B53 /* GameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameView.m; sourceTree = "<group>"; };
 		45FC53A708FBFB490091ABDF /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		45FC53A908FBFB490091ABDF /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		45FC53AA08FBFB490091ABDF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -153,10 +150,8 @@
 		3E2195E90CAD739D0059FEF2 /* Game View */ = {
 			isa = PBXGroup;
 			children = (
-				3E24CC8F0CAC2F6100087922 /* ShippoView.h */,
-				3E24CC900CAC2F6100087922 /* ShippoView.m */,
-				3E24CC940CAC2FE600087922 /* CIView.h */,
-				3E24CC950CAC2FE600087922 /* CIView.m */,
+				3EF399CC1412F8EB00BC8B53 /* GameView.h */,
+				3EF399CD1412F8EB00BC8B53 /* GameView.m */,
 			);
 			name = "Game View";
 			sourceTree = "<group>";
@@ -332,8 +327,6 @@
 			files = (
 				45FC53B108FBFB490091ABDF /* main.m in Sources */,
 				45FC53B508FBFB5B0091ABDF /* ShippoSearchDelegate.m in Sources */,
-				3E24CC910CAC2F6100087922 /* ShippoView.m in Sources */,
-				3E24CC960CAC2FE600087922 /* CIView.m in Sources */,
 				3E2195F30CAD74950059FEF2 /* TIPInputDevice.m in Sources */,
 				3E2195F40CAD74950059FEF2 /* TIPInputElement.m in Sources */,
 				3E2195F50CAD74950059FEF2 /* TIPInputManager.m in Sources */,
@@ -345,6 +338,7 @@
 				3E6200020CADCC7D001A1C73 /* FullscreenSheetController.m in Sources */,
 				3E6200050CADCC9B001A1C73 /* TIPScreenSelectionView.m in Sources */,
 				3EF399C71412A8D700BC8B53 /* PlayerConnectionValueTransformer.m in Sources */,
+				3EF399CE1412F8EC00BC8B53 /* GameView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

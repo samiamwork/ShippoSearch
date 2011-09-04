@@ -7,14 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "ShippoView.h"
 #import "ImageController.h"
 #import "PlayerController.h"
 #import "TIPFreeWindow.h"
+#import "GameView.h"
 
 @interface ShippoSearchDelegate : NSObject
 {
-	IBOutlet ShippoView *_imageView;
+	IBOutlet GameView *_imageView;
 	IBOutlet ImageController *_imageController;
 	IBOutlet PlayerController *_playerController;
 	IBOutlet NSTextField *_buzzedPlayerName;

@@ -104,13 +104,11 @@
 	}
 	
 	NSURL *imageURL = [[NSURL alloc] initFileURLWithPath:_imagePath];
-	CIImage *newImage =  [[CIImage alloc] initWithContentsOfURL:imageURL];
 	NSImage *resolvedImage = [[NSImage alloc] initWithContentsOfURL:imageURL];
 	[_resolvedImageView setImage:resolvedImage];
-	[_imageView setImage:newImage];
+	[_imageView setImage:resolvedImage];
 	[resolvedImage release];
 	[imageURL release];
-	[newImage release];
 	_startingBlockSize = [[NSUserDefaults standardUserDefaults] floatForKey:@"startingBlockSize"];
 	[_imageView setPixelSize:_startingBlockSize];
 	
