@@ -24,6 +24,8 @@
 	CABasicAnimation* _slideIn;
 	CABasicAnimation* _slideOut;
 	NSArray*          _players;
+
+	NSObject<GameViewDelegate>* delegate;
 }
 
 @property (assign,readwrite) NSObject<GameViewDelegate>* delegate;

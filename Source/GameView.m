@@ -217,7 +217,7 @@ const CGFloat kGameViewPlayerDisplayTime = 4.0;
 	{
 		_playerLayer.sublayers = nil;
 		_playerLayer.bounds = CGRectMake(0.0, 0.0, bounds.size.height, bounds.size.height);
-		_playerLayer.position = [self offScreenRight];
+		_playerLayer.position = NSPointToCGPoint([self offScreenRight]);
 	}
 	[CATransaction commit];
 
