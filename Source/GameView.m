@@ -9,6 +9,9 @@
 #import "GameView.h"
 #import "TriviaPlayer.h"
 
+const CGFloat kGameViewTransitionTime = 0.5;
+const CGFloat kGameViewPlayerDisplayTime = 4.0;
+
 @interface QuicklyResizingConstraintManager : CAConstraintLayoutManager
 @end
 
@@ -92,6 +95,7 @@
 	{
 		// Show player scores first
 		CAKeyframeAnimation* playerAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+		playerAnimation.duration = kGameViewTransitionTime*2.0 + kGameViewPlayerDisplayTime;
 		playerAnimation.values = [NSArray arrayWithObjects:
 								  [NSValue valueWithPoint:[self offScreenRight]],
 								  [NSValue valueWithPoint:[self screenCenter]],
@@ -100,11 +104,10 @@
 								  nil];
 		playerAnimation.keyTimes = [NSArray arrayWithObjects:
 									[NSNumber numberWithFloat:0.0],
-									[NSNumber numberWithFloat:0.2],
-									[NSNumber numberWithFloat:0.8],
+									[NSNumber numberWithFloat:kGameViewTransitionTime/playerAnimation.duration],
+									[NSNumber numberWithFloat:(kGameViewPlayerDisplayTime+kGameViewTransitionTime)/playerAnimation.duration],
 									[NSNumber numberWithFloat:1.0],
 									nil];
-		playerAnimation.duration = 5.0;
 		playerAnimation.removedOnCompletion = NO;
 		playerAnimation.fillMode = kCAFillModeForwards;
 		[self showPlayers];
@@ -114,7 +117,7 @@
 									[NSValue valueWithPoint:[self screenCenter]],
 								    [NSValue valueWithPoint:[self offScreenLeft]],
 								    nil];
-		imageOffAnimation.duration = 1.0;
+		imageOffAnimation.duration = kGameViewTransitionTime;
 		imageOffAnimation.removedOnCompletion = NO;
 		imageOffAnimation.fillMode = kCAFillModeForwards;
 
@@ -123,8 +126,8 @@
 								   [NSValue valueWithPoint:[self offScreenRight]],
 								   [NSValue valueWithPoint:[self screenCenter]],
 								   nil];
-		imageOnAnimation.duration = 1.0;
-		imageOnAnimation.beginTime = 4.0;
+		imageOnAnimation.duration = kGameViewTransitionTime;
+		imageOnAnimation.beginTime = kGameViewTransitionTime+kGameViewPlayerDisplayTime;
 		imageOnAnimation.removedOnCompletion = NO;
 		imageOnAnimation.fillMode = kCAFillModeForwards;
 
@@ -140,7 +143,7 @@
 									  [NSNumber numberWithFloat:1.0],
 									  nil];
 		setImageAnimation.calculationMode = kCAAnimationDiscrete;
-		setImageAnimation.duration = 5.0;
+		setImageAnimation.duration = kGameViewTransitionTime*2.0 + kGameViewPlayerDisplayTime;
 		setImageAnimation.removedOnCompletion = NO;
 		setImageAnimation.fillMode = kCAFillModeForwards;
 
@@ -150,11 +153,12 @@
 									  [NSNumber numberWithFloat:[[NSUserDefaults standardUserDefaults] floatForKey:@"startingBlockSize"]],
 									  nil];
 		pixelationAnimation.calculationMode = kCAAnimationDiscrete;
-		pixelationAnimation.duration = 2.0;
+		// "* 2.0" because a discreet transition happens in the middle of the duration
+		pixelationAnimation.duration = kGameViewTransitionTime*2.0;
 		pixelationAnimation.fillMode = kCAFillModeForwards;
 
 		CAAnimationGroup* imageGroup = [CAAnimationGroup animation];
-		imageGroup.duration = 5.0;
+		imageGroup.duration = kGameViewTransitionTime*2.0 + kGameViewPlayerDisplayTime;
 		imageGroup.animations = [NSArray arrayWithObjects:imageOffAnimation, imageOnAnimation, setImageAnimation, pixelationAnimation, nil];
 		imageGroup.delegate = self;
 
