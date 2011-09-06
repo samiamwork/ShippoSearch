@@ -31,6 +31,7 @@
 {
 	[_imageView setImage:nil];	
 	[_imageView setPixelSize:1.0f];
+	_imageView.delegate = self;
 	
 	_timer = [NSTimer scheduledTimerWithTimeInterval:1.0/30.0f target:self selector:@selector(animationTick:) userInfo:nil repeats:YES];
 	_animation = [[NSAnimation alloc] initWithDuration:(NSTimeInterval)[[NSUserDefaults standardUserDefaults] integerForKey:@"imageDisplaySeconds"] animationCurve:NSAnimationLinear];
@@ -41,6 +42,7 @@
 	_paused = NO;
 	
 	_buzzerSound = [[NSSound soundNamed:@"Submarine"] retain];
+	_imageView.players = [_playerController players];
 }
 
 - (void)dealloc
@@ -69,7 +71,7 @@
 {
 	if( ![_animation isAnimating] )
 		return;
-	
+
 	[_imageView setPixelSize:(1.0f-sqrtf([_animation currentProgress]))*(_startingBlockSize-1.0f)+1.0f];
 	[_pointValueField setIntValue:[self scoreForValue:[_animation currentProgress]]];
 }
@@ -91,6 +93,16 @@
 	}
 }
 
+- (void)gameViewImageShown:(GameView*)gameView
+{
+	// Start animation timer
+	_buzzedPlayer = nil;
+	[_animation setDuration:(NSTimeInterval)[[NSUserDefaults standardUserDefaults] integerForKey:@"imageDisplaySeconds"]];
+	[_animation setCurrentProgress:0.0];
+	[_animation startAnimation];
+	[_playerController setAllPlayersEnabled:YES];
+}
+
 - (IBAction)nextImage:(id)sender
 {
 	_paused = NO;
@@ -110,13 +122,6 @@
 	[resolvedImage release];
 	[imageURL release];
 	_startingBlockSize = [[NSUserDefaults standardUserDefaults] floatForKey:@"startingBlockSize"];
-	[_imageView setPixelSize:_startingBlockSize];
-	
-	_buzzedPlayer = nil;
-	[_animation setDuration:(NSTimeInterval)[[NSUserDefaults standardUserDefaults] integerForKey:@"imageDisplaySeconds"]];
-	[_animation setCurrentProgress:0.0];
-	[_animation startAnimation];
-	[_playerController setAllPlayersEnabled:YES];
 }
 
 - (void)playerBuzzed:(TriviaPlayer *)thePlayer

@@ -12,7 +12,7 @@
 #import "TIPFreeWindow.h"
 #import "GameView.h"
 
-@interface ShippoSearchDelegate : NSObject
+@interface ShippoSearchDelegate : NSObject<GameViewDelegate>
 {
 	IBOutlet GameView *_imageView;
 	IBOutlet ImageController *_imageController;
