@@ -90,6 +90,12 @@ const CGFloat kGameViewPlayerDisplayTime = 4.0;
 
 - (void)setImage:(NSImage *)theImage
 {
+	if(theImage == nil)
+	{
+		_imageLayer.contents = nil;
+		return;
+	}
+
 	CGImageRef cgImage = [theImage CGImageForProposedRect:NULL context:nil hints:nil];
 	if(_imageLayer.contents != nil)
 	{
