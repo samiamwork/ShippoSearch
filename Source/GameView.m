@@ -110,6 +110,11 @@ const CGFloat kGameViewPlayerDisplayTime = 4.0;
 									nil];
 		playerAnimation.removedOnCompletion = NO;
 		playerAnimation.fillMode = kCAFillModeForwards;
+		playerAnimation.timingFunctions = [NSArray arrayWithObjects:
+										   [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+										   [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+										   [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+										   nil];
 		[self showPlayers];
 
 		CAKeyframeAnimation* imageOffAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
@@ -118,6 +123,9 @@ const CGFloat kGameViewPlayerDisplayTime = 4.0;
 								    [NSValue valueWithPoint:[self offScreenLeft]],
 								    nil];
 		imageOffAnimation.duration = kGameViewTransitionTime;
+		imageOffAnimation.timingFunctions = [NSArray arrayWithObjects:
+											 [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+											 nil];
 		imageOffAnimation.removedOnCompletion = NO;
 		imageOffAnimation.fillMode = kCAFillModeForwards;
 
@@ -128,6 +136,9 @@ const CGFloat kGameViewPlayerDisplayTime = 4.0;
 								   nil];
 		imageOnAnimation.duration = kGameViewTransitionTime;
 		imageOnAnimation.beginTime = kGameViewTransitionTime+kGameViewPlayerDisplayTime;
+		imageOnAnimation.timingFunctions = [NSArray arrayWithObjects:
+											[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+											nil];
 		imageOnAnimation.removedOnCompletion = NO;
 		imageOnAnimation.fillMode = kCAFillModeForwards;
 
