@@ -49,22 +49,20 @@
 	return _players;
 }
 
+- (void)insertObject:(TriviaPlayer *)newPlayer inPlayersAtIndex:(NSUInteger)playerIndex
+{
+	[_players insertObject:newPlayer atIndex:playerIndex];
+}
+
+- (void)removeObjectFromPlayersAtIndex:(NSUInteger)playerIndex
+{
+	[_players removeObjectAtIndex:playerIndex];
+}
+
 - (void)awakeFromNib
 {
 }
 
-- (IBAction)addPlayer:(id)sender
-{
-	[self willChangeValueForKey:@"players"];
-	[_players addObject:[[[TriviaPlayer alloc] init] autorelease]];
-	[self didChangeValueForKey:@"players"];
-}
-- (IBAction)removePlayer:(id)sender
-{
-	[self willChangeValueForKey:@"players"];
-	[_players removeObjectAtIndex:[_table selectedRow]];
-	[self didChangeValueForKey:@"players"];
-}
 - (IBAction)setButton:(id)sender
 {
 	TriviaPlayer *thePlayer = [_players objectAtIndex:[_table selectedRow]];

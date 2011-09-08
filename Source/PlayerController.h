@@ -22,8 +22,6 @@
 - (id)delegate;
 - (void)setDelegate:(id)newDelegate;
 
-- (IBAction)addPlayer:(id)sender;
-- (IBAction)removePlayer:(id)sender;
 - (IBAction)setButton:(id)sender;
 - (void)reloadData;
 
