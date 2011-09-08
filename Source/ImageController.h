@@ -11,6 +11,7 @@
 
 @interface ImageController : NSObject {
 	IBOutlet NSTableView *_table;
+	IBOutlet NSTextField *_imagesLeftLabel;
 	
 	NSString *_path;
 	NSMutableArray *_images;

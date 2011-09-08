@@ -32,6 +32,7 @@
 		if( [acceptedFileTypes containsObject:[aFile pathExtension]] )
 			[_images addObject:aFile];
 	}
+	[_imagesLeftLabel setStringValue:[NSString stringWithFormat:@"%d left", (int)[_images count]]];
 }
 
 - (void)awakeFromNib
@@ -78,6 +79,7 @@
 {
 	[_images removeObject:[stringToRemove lastPathComponent]];
 	[_table reloadData];
+	[_imagesLeftLabel setStringValue:[NSString stringWithFormat:@"%d left", (int)[_images count]]];
 }
 
 #pragma mark TableView Datasource Methods
