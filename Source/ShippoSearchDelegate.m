@@ -121,6 +121,7 @@
 	[_imageView setImage:resolvedImage];
 	[resolvedImage release];
 	[imageURL release];
+	[_pointValueField setStringValue:@""];
 	_startingBlockSize = [[NSUserDefaults standardUserDefaults] floatForKey:@"startingBlockSize"];
 }
 
