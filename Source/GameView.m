@@ -96,9 +96,11 @@ const CGFloat kGameViewPlayerDisplayTime = 4.0;
 		return;
 	}
 
+	BOOL firstImage = YES;
 	CGImageRef cgImage = [theImage CGImageForProposedRect:NULL context:nil hints:nil];
 	if(_imageLayer.contents != nil)
 	{
+		firstImage = NO;
 		// Show player scores first
 		CAKeyframeAnimation* playerAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
 		playerAnimation.duration = kGameViewTransitionTime*2.0 + kGameViewPlayerDisplayTime;
@@ -190,7 +192,11 @@ const CGFloat kGameViewPlayerDisplayTime = 4.0;
 	[_imageLayer setValue:[NSNumber numberWithFloat:[[NSUserDefaults standardUserDefaults] floatForKey:@"startingBlockSize"]] forKeyPath:@"filters.pixelate.inputScale"];
 
 	[CATransaction commit];
-	[self animationDidStop:nil finished:YES];
+
+	if(firstImage)
+	{
+		[self animationDidStop:nil finished:YES];
+	}
 }
 
 - (void)setPixelSize:(CGFloat)pixelSize
