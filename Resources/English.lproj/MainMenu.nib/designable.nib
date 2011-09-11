@@ -237,8 +237,7 @@
 								<object class="NSMenuItem" id="580473243">
 									<reference key="NSMenu" ref="796426702"/>
 									<string key="NSTitle">Open...</string>
-									<string key="NSKeyEquiv">o</string>
-									<int key="NSKeyEquivModMask">1048576</int>
+									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="43801645"/>
 									<reference key="NSMixedImage" ref="783671524"/>
@@ -718,7 +717,7 @@
 													<string key="NSFrameSize">{243, 169}</string>
 													<reference key="NSSuperview" ref="877135049"/>
 													<reference key="NSWindow"/>
-													<reference key="NSNextKeyView" ref="928179024"/>
+													<reference key="NSNextKeyView" ref="834843194"/>
 													<bool key="NSEnabled">YES</bool>
 													<object class="_NSCornerView" key="NSCornerView">
 														<nil key="NSNextResponder"/>
@@ -888,7 +887,7 @@
 									<string key="NSFrameSize">{245, 171}</string>
 									<reference key="NSSuperview" ref="140918488"/>
 									<reference key="NSWindow"/>
-									<reference key="NSNextKeyView" ref="834843194"/>
+									<reference key="NSNextKeyView" ref="877135049"/>
 									<int key="NSsFlags">133138</int>
 									<reference key="NSVScroller" ref="928179024"/>
 									<reference key="NSHScroller" ref="834843194"/>
@@ -909,7 +908,7 @@
 													<string key="NSFrameSize">{232, 169}</string>
 													<reference key="NSSuperview" ref="810102353"/>
 													<reference key="NSWindow"/>
-													<reference key="NSNextKeyView" ref="551647634"/>
+													<reference key="NSNextKeyView" ref="253941"/>
 													<bool key="NSEnabled">YES</bool>
 													<object class="_NSCornerView" key="NSCornerView">
 														<nil key="NSNextResponder"/>
@@ -998,7 +997,7 @@
 									<string key="NSFrame">{{254, 0}, {234, 171}}</string>
 									<reference key="NSSuperview" ref="140918488"/>
 									<reference key="NSWindow"/>
-									<reference key="NSNextKeyView" ref="253941"/>
+									<reference key="NSNextKeyView" ref="810102353"/>
 									<int key="NSsFlags">133138</int>
 									<reference key="NSVScroller" ref="551647634"/>
 									<reference key="NSHScroller" ref="253941"/>
@@ -1062,7 +1061,6 @@
 							<string key="NSFrame">{{493, -3}, {244, 279}}</string>
 							<reference key="NSSuperview" ref="247597610"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSImageCell" key="NSCell" id="424046310">
 								<int key="NSCellFlags">270663168</int>
