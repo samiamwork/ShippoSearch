@@ -101,6 +101,16 @@
 	[_animation setCurrentProgress:0.0];
 	[_animation startAnimation];
 	[_playerController setAllPlayersEnabled:YES];
+	_showingScores = NO;
+}
+
+- (BOOL)validateUserInterfaceItem:(id <NSValidatedUserInterfaceItem>)anItem
+{
+	if([anItem action] == @selector(nextImage:) && _showingScores)
+	{
+		return NO;
+	}
+	return YES;
 }
 
 - (IBAction)nextImage:(id)sender
@@ -108,6 +118,8 @@
 	_paused = NO;
 	[_imageController removeImage:_imagePath];
 	_imagePath = [[_imageController getImage] retain];
+	[_animation stopAnimation];
+	[_animation setCurrentProgress:0.0];
 	if(_imagePath == nil)
 	{
 		[_imageView setImage:nil];
@@ -117,6 +129,7 @@
 	
 	NSURL *imageURL = [[NSURL alloc] initFileURLWithPath:_imagePath];
 	NSImage *resolvedImage = [[NSImage alloc] initWithContentsOfURL:imageURL];
+	_showingScores = YES;
 	[_resolvedImageView setImage:resolvedImage];
 	[_imageView setImage:resolvedImage];
 	[resolvedImage release];

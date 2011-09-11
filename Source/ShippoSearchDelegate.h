@@ -28,6 +28,7 @@
 	NSSound *_buzzerSound;
 	float _startingBlockSize;
 	BOOL  _paused;
+	BOOL  _showingScores;
 	
 	TriviaPlayer *_buzzedPlayer;
 }
