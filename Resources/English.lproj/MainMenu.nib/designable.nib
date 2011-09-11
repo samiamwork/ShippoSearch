@@ -544,7 +544,7 @@
 							<string key="NSFrame">{{68, 72}, {81, 23}}</string>
 							<reference key="NSSuperview" ref="247597610"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="960766562"/>
+							<reference key="NSNextKeyView" ref="991204594"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="204202651">
 								<int key="NSCellFlags">67239424</int>
@@ -571,7 +571,7 @@
 							<string key="NSFrame">{{346, 73}, {121, 22}}</string>
 							<reference key="NSSuperview" ref="247597610"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
+							<reference key="NSNextKeyView" ref="397102105"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="502725352">
 								<int key="NSCellFlags">-2075001280</int>
@@ -638,7 +638,7 @@
 							<string key="NSFrame">{{15, 32}, {82, 34}}</string>
 							<reference key="NSSuperview" ref="247597610"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="991204594"/>
+							<reference key="NSNextKeyView" ref="651326757"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="42285881">
 								<int key="NSCellFlags">67239424</int>
@@ -647,7 +647,7 @@
 								<reference key="NSSupport" ref="748433535"/>
 								<reference key="NSControlView" ref="397102105"/>
 								<int key="NSButtonFlags">-2038284033</int>
-								<int key="NSButtonFlags2">32</int>
+								<int key="NSButtonFlags2">268435488</int>
 								<reference key="NSAlternateImage" ref="748433535"/>
 								<string key="NSAlternateContents"/>
 								<string key="NSKeyEquivalent">x</string>
@@ -670,7 +670,7 @@
 								<reference key="NSSupport" ref="748433535"/>
 								<reference key="NSControlView" ref="651326757"/>
 								<int key="NSButtonFlags">-2038284033</int>
-								<int key="NSButtonFlags2">32</int>
+								<int key="NSButtonFlags2">268435488</int>
 								<reference key="NSAlternateImage" ref="748433535"/>
 								<string key="NSAlternateContents"/>
 								<string key="NSKeyEquivalent">o</string>
@@ -684,7 +684,7 @@
 							<string key="NSFrame">{{148, 72}, {77, 23}}</string>
 							<reference key="NSSuperview" ref="247597610"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="651326757"/>
+							<reference key="NSNextKeyView" ref="960766562"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="1005973432">
 								<int key="NSCellFlags">67239424</int>
