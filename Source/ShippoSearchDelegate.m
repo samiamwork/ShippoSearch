@@ -120,6 +120,7 @@
 	_imagePath = [[_imageController getImage] retain];
 	[_animation stopAnimation];
 	[_animation setCurrentProgress:0.0];
+	[_buzzedPlayerName setStringValue:@""];
 	if(_imagePath == nil)
 	{
 		[_imageView setImage:nil];
@@ -159,7 +160,6 @@
 	[_animation setCurrentProgress:0.0];
 	[_playerController setAllPlayersEnabled:NO];
 	[_playerController reloadData];
-	[_buzzedPlayerName setStringValue:@""];
 	_buzzedPlayer = nil;
 }
 - (IBAction)wrongAnswer:(id)sender
