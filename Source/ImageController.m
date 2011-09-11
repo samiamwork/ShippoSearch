@@ -73,6 +73,7 @@
 	unsigned int randomImageIndex = rand() % [_images count];
 	NSString *imagePath = [_path stringByAppendingPathComponent:[_images objectAtIndex:randomImageIndex]];
 	[_table selectRowIndexes:[NSIndexSet indexSetWithIndex:randomImageIndex] byExtendingSelection:NO];
+	[_table scrollRowToVisible:randomImageIndex];
 	return imagePath;
 }
 - (void)removeImage:(NSString *)stringToRemove
