@@ -125,6 +125,7 @@
 	{
 		[_imageView setImage:nil];
 		[_resolvedImageView setImage:nil];
+		[_currentImageName setStringValue:@""];
 		return;
 	}
 	
@@ -132,6 +133,7 @@
 	NSImage *resolvedImage = [[NSImage alloc] initWithContentsOfURL:imageURL];
 	_showingScores = YES;
 	[_resolvedImageView setImage:resolvedImage];
+	[_currentImageName setStringValue:[[imageURL lastPathComponent] stringByDeletingPathExtension]];
 	[_imageView setImage:resolvedImage];
 	[resolvedImage release];
 	[imageURL release];

@@ -21,6 +21,7 @@
 	IBOutlet TIPFreeWindow *_gameWindow;
 	IBOutlet NSTextField *_pointValueField;
 	IBOutlet NSImageView *_resolvedImageView;
+	IBOutlet NSTextField *_currentImageName;
 	
 	NSTimer *_timer;
 	NSAnimation *_animation;
