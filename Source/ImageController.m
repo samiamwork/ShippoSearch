@@ -43,6 +43,14 @@
 	[_table reloadData];
 }
 
+- (void)openDirectory:(NSString*)directoryPath
+{
+	[_path release];
+	_path = [directoryPath retain];
+	[self getImages];
+	[_table reloadData];
+}
+
 - (IBAction)setDirectory:(id)sender
 {
 	NSOpenPanel *openPanel = [NSOpenPanel openPanel];
@@ -57,11 +65,9 @@
 	NSString *newPath = [openPanel filename];
 	if( !newPath )
 		return;
-	
-	[_path release];
-	_path = [newPath retain];
-	[self getImages];
-	[_table reloadData];
+
+	[[NSDocumentController sharedDocumentController] noteNewRecentDocumentURL:[openPanel URL]];
+	[self openDirectory:newPath];
 }
 
 - (NSString *)getImage

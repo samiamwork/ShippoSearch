@@ -17,6 +17,7 @@
 	NSMutableArray *_images;
 }
 
+- (void)openDirectory:(NSString*)directoryPath;
 - (IBAction)setDirectory:(id)sender;
 
 - (NSString *)getImage;

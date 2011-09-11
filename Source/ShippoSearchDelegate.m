@@ -173,4 +173,11 @@
 {
 	[_gameWindow toggleFullscreen:self];
 }
+
+- (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
+{
+	[_imageController openDirectory:filename];
+	return YES;
+}
+
 @end
