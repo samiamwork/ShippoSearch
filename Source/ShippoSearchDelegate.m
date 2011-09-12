@@ -143,7 +143,7 @@
 
 - (void)playerBuzzed:(TriviaPlayer *)thePlayer
 {
-	if( _buzzedPlayer || _paused)
+	if( _buzzedPlayer || _paused || _showingScores)
 		return;
 	
 	_buzzedPlayer = thePlayer;
