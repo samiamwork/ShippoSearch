@@ -336,6 +336,29 @@
 							</array>
 						</object>
 					</object>
+					<object class="NSMenuItem" id="46775723">
+						<reference key="NSMenu" ref="878170725"/>
+						<string key="NSTitle">Players</string>
+						<string key="NSKeyEquiv"/>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<reference key="NSOnImage" ref="43801645"/>
+						<reference key="NSMixedImage" ref="783671524"/>
+						<string key="NSAction">submenuAction:</string>
+						<object class="NSMenu" key="NSSubmenu" id="213195293">
+							<string key="NSTitle">Players</string>
+							<array class="NSMutableArray" key="NSMenuItems">
+								<object class="NSMenuItem" id="1068530017">
+									<reference key="NSMenu" ref="213195293"/>
+									<string key="NSTitle">Add Player</string>
+									<string key="NSKeyEquiv">n</string>
+									<int key="NSKeyEquivModMask">1048576</int>
+									<int key="NSMnemonicLoc">2147483647</int>
+									<reference key="NSOnImage" ref="43801645"/>
+									<reference key="NSMixedImage" ref="783671524"/>
+								</object>
+							</array>
+						</object>
+					</object>
 					<object class="NSMenuItem" id="763295079">
 						<reference key="NSMenu" ref="878170725"/>
 						<string key="NSTitle">Window</string>
@@ -661,7 +684,7 @@
 													<string key="NSFrameSize">{243, 169}</string>
 													<reference key="NSSuperview" ref="877135049"/>
 													<reference key="NSWindow"/>
-													<reference key="NSNextKeyView" ref="834843194"/>
+													<reference key="NSNextKeyView" ref="928179024"/>
 													<bool key="NSEnabled">YES</bool>
 													<object class="_NSCornerView" key="NSCornerView">
 														<nil key="NSNextResponder"/>
@@ -831,7 +854,7 @@
 									<string key="NSFrameSize">{245, 171}</string>
 									<reference key="NSSuperview" ref="140918488"/>
 									<reference key="NSWindow"/>
-									<reference key="NSNextKeyView" ref="877135049"/>
+									<reference key="NSNextKeyView" ref="834843194"/>
 									<int key="NSsFlags">133138</int>
 									<reference key="NSVScroller" ref="928179024"/>
 									<reference key="NSHScroller" ref="834843194"/>
@@ -852,7 +875,7 @@
 													<string key="NSFrameSize">{232, 169}</string>
 													<reference key="NSSuperview" ref="810102353"/>
 													<reference key="NSWindow"/>
-													<reference key="NSNextKeyView" ref="253941"/>
+													<reference key="NSNextKeyView" ref="551647634"/>
 													<bool key="NSEnabled">YES</bool>
 													<object class="_NSCornerView" key="NSCornerView">
 														<nil key="NSNextResponder"/>
@@ -940,7 +963,7 @@
 									<string key="NSFrame">{{254, 0}, {234, 171}}</string>
 									<reference key="NSSuperview" ref="140918488"/>
 									<reference key="NSWindow"/>
-									<reference key="NSNextKeyView" ref="810102353"/>
+									<reference key="NSNextKeyView" ref="253941"/>
 									<int key="NSsFlags">133138</int>
 									<reference key="NSVScroller" ref="551647634"/>
 									<reference key="NSHScroller" ref="253941"/>
@@ -1004,6 +1027,7 @@
 							<string key="NSFrame">{{493, -3}, {244, 279}}</string>
 							<reference key="NSSuperview" ref="247597610"/>
 							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSImageCell" key="NSCell" id="424046310">
 								<int key="NSCellFlags">270663168</int>
@@ -1783,6 +1807,14 @@
 					</object>
 					<int key="connectionID">402</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">add:</string>
+						<reference key="source" ref="118001870"/>
+						<reference key="destination" ref="1068530017"/>
+					</object>
+					<int key="connectionID">406</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -1840,6 +1872,7 @@
 							<reference ref="932319107"/>
 							<reference ref="543453138"/>
 							<reference ref="470400437"/>
+							<reference ref="46775723"/>
 						</array>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">MainMenu</string>
@@ -2538,6 +2571,27 @@
 						<reference key="object" ref="799355104"/>
 						<reference key="parent" ref="792326533"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">403</int>
+						<reference key="object" ref="46775723"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="213195293"/>
+						</array>
+						<reference key="parent" ref="878170725"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">404</int>
+						<reference key="object" ref="213195293"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="1068530017"/>
+						</array>
+						<reference key="parent" ref="46775723"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">405</int>
+						<reference key="object" ref="1068530017"/>
+						<reference key="parent" ref="213195293"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -2645,6 +2699,9 @@
 				<string key="398.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="400.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="401.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="403.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="404.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="405.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="56.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="57.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -2660,7 +2717,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">402</int>
+			<int key="maxID">406</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
