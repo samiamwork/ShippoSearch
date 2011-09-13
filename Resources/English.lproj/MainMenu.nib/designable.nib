@@ -356,6 +356,15 @@
 									<reference key="NSOnImage" ref="43801645"/>
 									<reference key="NSMixedImage" ref="783671524"/>
 								</object>
+								<object class="NSMenuItem" id="196652265">
+									<reference key="NSMenu" ref="213195293"/>
+									<string key="NSTitle">Remove Player</string>
+									<string type="base64-UTF8" key="NSKeyEquiv">CA</string>
+									<int key="NSKeyEquivModMask">1048576</int>
+									<int key="NSMnemonicLoc">2147483647</int>
+									<reference key="NSOnImage" ref="43801645"/>
+									<reference key="NSMixedImage" ref="783671524"/>
+								</object>
 							</array>
 						</object>
 					</object>
@@ -1341,6 +1350,7 @@
 				<string key="NSObjectClassName">TriviaPlayer</string>
 				<bool key="NSEditable">YES</bool>
 				<object class="_NSManagedProxy" key="_NSManagedProxy"/>
+				<bool key="NSAvoidsEmptySelection">YES</bool>
 				<bool key="NSPreservesSelection">YES</bool>
 				<bool key="NSSelectsInsertedObjects">YES</bool>
 				<bool key="NSFilterRestrictsInsertion">YES</bool>
@@ -1814,6 +1824,14 @@
 						<reference key="destination" ref="1068530017"/>
 					</object>
 					<int key="connectionID">406</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">remove:</string>
+						<reference key="source" ref="118001870"/>
+						<reference key="destination" ref="196652265"/>
+					</object>
+					<int key="connectionID">409</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -2584,12 +2602,18 @@
 						<reference key="object" ref="213195293"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="1068530017"/>
+							<reference ref="196652265"/>
 						</array>
 						<reference key="parent" ref="46775723"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">405</int>
 						<reference key="object" ref="1068530017"/>
+						<reference key="parent" ref="213195293"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">408</int>
+						<reference key="object" ref="196652265"/>
 						<reference key="parent" ref="213195293"/>
 					</object>
 				</array>
@@ -2702,6 +2726,7 @@
 				<string key="403.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="404.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="405.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="408.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="56.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="57.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -2717,7 +2742,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">406</int>
+			<int key="maxID">409</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
