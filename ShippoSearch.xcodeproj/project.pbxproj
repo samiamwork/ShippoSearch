@@ -414,7 +414,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
 				PRODUCT_NAME = ShippoSearch;
-				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
 			};
@@ -423,7 +422,6 @@
 		45FC538408FBF91C0091ABDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
@@ -453,7 +451,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
 				PRODUCT_NAME = ShippoSearch;
-				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
 			};
@@ -464,7 +461,6 @@
 			buildSettings = {
 				APPLICATION_VERSION = 1.0a1;
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				SDKROOT = macosx10.6;
 			};
 			name = Debug;
 		};
@@ -472,8 +468,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_VERSION = 1.0a1;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				SDKROOT = macosx10.6;
 			};
 			name = Release;
 		};
