@@ -35,6 +35,10 @@ const CGFloat kGameViewPlayerDisplayTime = 4.0;
 
 - (void)awakeFromNib
 {
+	if([self respondsToSelector:@selector(setLayerUsesCoreImageFilters:)])
+	{
+		self.layerUsesCoreImageFilters = YES;
+	}
 	_rootLayer = [CALayer layer];
 	_rootLayer.name = @"Root Layer";
 	_rootLayer.layoutManager = [QuicklyResizingConstraintManager layoutManager];
